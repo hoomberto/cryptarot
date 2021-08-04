@@ -9,6 +9,8 @@ const App = () => {
   const [cryptoData, setCryptoData] = useState([])
   const [results, setResults] = useState([])
   const [randomCard, setRandomCard] = useState('')
+  const [randomCrypto, setRandomCrypto] = useState('')
+  const [currentResult, setCurrentResult] = useState('')
 
   useEffect(() => {
     getData()
@@ -26,17 +28,47 @@ const App = () => {
   const getRandomCard = () => {
     let random = cards[getRandomIndex(cards)]
     setRandomCard(random)
+  }
 
+  const getRandomCrypto = () => {
+    let random = cryptoData[getRandomIndex(cryptoData)]
+    setRandomCrypto(random)
+  }
+
+  const newRandoms = () => {
+    getRandomCard()
+    getRandomCrypto()
+  }
+
+  // const getRandomFrom = (dataset) => {
+  //   return dataset[getRandomIndex(dataset)]
+  // }
+  //
+  // const getRandomCrypto = () => {
+  //   return setRandomCrypto(getRandomFrom(cryptoData))
+  // }
+
+  const renderCrypto = () => {
+    if (!randomCrypto) {
+      getRandomCrypto()
+    }
+
+    return (
+      <>
+        <h2>{randomCrypto.name}</h2>
+      </>
+    )
   }
 
   const renderCard = () => {
     if (!randomCard) {
       getRandomCard()
     }
+
     return (
       <>
         <h2>{randomCard.name}</h2>
-        <h3>{randomCard.value}</h3>
+        <h3>{randomCard.type === "major" && randomCard.value}</h3>
         <h3>{randomCard.description}</h3>
       </>
     )
@@ -44,10 +76,11 @@ const App = () => {
 
   return (
     <main className="App">
-    {!!cards.length &&
+    {!!cards.length && !!cryptoData.length &&
       <div>
         <div>{renderCard()}</div>
-        <button onClick={getRandomCard}>New Card</button>
+        <div>{renderCrypto()}</div>
+        <button onClick={newRandoms}>New Card</button>
       </div>
     }
     </main>
