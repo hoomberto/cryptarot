@@ -1,9 +1,13 @@
-const CardInfo = ({card}) => {
+const CardInfo = ({card, clicked}) => {
   return (
     <>
-      <h2>{card.name}</h2>
-      <h3>{card.type === "major" && card.value}</h3>
+    {!!clicked &&
+      <div>
+      <h2>{card.type === "major" && `${card.value}`} {card.name}</h2>
       <h3>{card.description}</h3>
+
+      </div>
+    }
     </>
   )
 }
