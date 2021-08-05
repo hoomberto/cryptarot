@@ -1,12 +1,12 @@
-import React from "react
+import React from "react"
 
 import { images } from '../../utilities/images'
 
 
-const Card = ({ currentCard }) => {
+const Card = ({ name }) => {
   return (
     <>
-      <img src={images.find(image => image.includes(currentCard.name_short))} />
+      <img src={images.find(image => image.includes(name))} />
     </>
   )
 }
