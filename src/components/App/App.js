@@ -43,11 +43,8 @@ const App = () => {
     <Switch>
     <Route exact path="/" component={Landing} />
       <Route exact path="/pick" render={() => {
-        return (
-          <>
-          {!tarotData ? false : <CardChoice data={tarotData} />}
-          </>
-        )
+        return <CardChoice data={tarotData || false} />
+
       }} />
       <Route exact path="/cryptos" component={CardChoice} />
     </Switch>
