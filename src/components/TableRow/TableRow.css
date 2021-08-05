@@ -1,3 +1,19 @@
 .table-name {
   font-size: 22px;
+  text-align: left;
+}
+
+.price,
+.circ-supply,
+.max-supply {
+  text-align: right;
+}
+
+tr td {
+  text-align: center;
+}
+
+tr:nth-of-type(odd) {
+  background: lightgray;
+  border-top: 1px solid gray;
 }

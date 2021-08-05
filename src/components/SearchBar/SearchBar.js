@@ -8,8 +8,8 @@ const SearchBar = ({query, set}) => {
     <form onSubmit={handleSubmit}>
       <input
         value={query}
-        placeholder=""
-        onChange={set}
+        placeholder="Search for a currency"
+        onChange={event => set(event.target.value)}
       />
     </form>
   )

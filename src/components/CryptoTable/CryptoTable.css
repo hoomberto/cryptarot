@@ -1,5 +1,10 @@
 
-
 .heading {
   font-size: 22px;
+  text-align: center;
+}
+
+th {
+  background: maroon;
+  color: white;
 }
