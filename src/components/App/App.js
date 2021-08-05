@@ -1,52 +1,51 @@
-import React, { useState, useEffect }  from "react"
+import React, { useState, useEffect } from 'react'
+import { Route, Switch } from 'react-router-dom'
+import CardChoice from '../CardChoice/CardChoice'
+import Landing from '../Landing/Landing'
 import { getData } from '../../utilities/apiCalls'
-import { getRandomCard, getRandomCrypto } from '../../utilities/utils'
-import Card from '../Card/Card'
-import CardInfo from '../CardInfo/CardInfo'
-import CryptoHeader from '../CryptoHeader/CryptoHeader'
+import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal } from '../../utilities/utils'
+
 import './App.css';
 
 const App = () => {
-
   const [tarotData, setTarotData] = useState('')
-  const [reading, setReading] = useState('')
 
   useEffect(() => {
-  let isMounted = true
-  getData()
-  .then(data => {
-    if (isMounted) {
-      setTarotData({
-        cards: data[0].cards,
-        cryptoData: data[1].slice(0, 100),
-        results: data[2].results,
-        currentCard: getRandomCard(data[0].cards),
-        crypto: getRandomCrypto(data[1].slice(0, 100))
+    let localResults = getCheckLocal();
+    if (!localResults) {
+      getData()
+      .then(data => {
+        setAllLocal(data)
+        setTarotData({
+            cards: data[0].cards,
+            cryptoData: data[1].slice(0, 100),
+            results: data[2].results,
+            currentCard: getRandomCard(data[0].cards),
+            crypto: getRandomCrypto(data[1].slice(0, 100))
         })
-      }
-    })
-    return () => {
-      isMounted = false
-    };
+      })
+    }
+    else {
+      setTarotData({
+        cards: localResults[0],
+        cryptoData: localResults[1],
+        results: localResults[2],
+        currentCard: getRandomCard(localResults[0]),
+        crypto: getRandomCrypto(localResults[1])
+      })
+    }
   }, [])
-
-  const newReading = () => {
-    setReading({
-      card: getRandomCard(tarotData.cards),
-      crypto: getRandomCrypto(tarotData.cryptoData)
-    })
-  }
 
   return (
     <main>
-      {!!tarotData &&
-        <section>
-          <CardInfo card={!!reading ? reading.card : tarotData.currentCard} />
-          <CryptoHeader crypto={!!reading ? reading.crypto : tarotData.crypto} />
-          <Card name={!!reading ? reading.card.name_short : tarotData.currentCard.name_short} />
-          <button onClick={newReading}>New Reading</button>
-        </section>
-      }
+    <Switch>
+    <Route exact path="/" component={Landing} />
+      <Route exact path="/pick" render={() => {
+        return <CardChoice data={tarotData || false} />
+
+      }} />
+      <Route exact path="/cryptos" component={CardChoice} />
+    </Switch>
     </main>
   );
 }

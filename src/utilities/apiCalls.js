@@ -1,7 +1,9 @@
+// import { checkLocal } from './utils'
 const nomics = "https://api.nomics.com/v1/currencies/ticker?key=39882e2a6e59afede70e88be7f53e7d7ed14b4c0"
 
 const getCards = () => {
   return fetch('https://cryptarot-api.herokuapp.com/api/v1/cards')
+    // .then(checkResponse(response, 'cards'))
     .then(checkResponse)
 }
 
@@ -12,13 +14,15 @@ const getCryptoData = () => {
 
 const getResults = () => {
   return fetch('https://cryptarot-api.herokuapp.com/api/v1/results')
+  // .then(checkResponse(response, 'results'))
   .then(checkResponse)
 }
 
 const checkResponse = (response) => {
   if (response.ok) {
-    return response.json();
-  } else {
+    return response.json()
+  }
+  else {
     return `Request could not go through.`
   }
 };
