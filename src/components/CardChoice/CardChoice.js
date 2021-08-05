@@ -2,7 +2,6 @@ import React , {useState} from 'react'
 import Card from '../Card/Card'
 import CardInfo from '../CardInfo/CardInfo'
 import CryptoHeader from '../CryptoHeader/CryptoHeader'
-import { getData } from '../../utilities/apiCalls'
 import { getRandomCard, getRandomCrypto } from '../../utilities/utils'
 import './CardChoice.css'
 
@@ -19,7 +18,7 @@ const CardChoice = ({ data}) => {
 
   return  (
     <>
-      {!data ? <h2>Loading...</h2> :
+      {!data ? <h2>The spirits are gathering...</h2> :
         <section>
           <CardInfo card={!!reading ? reading.card : data.currentCard} />
           <CryptoHeader crypto={!!reading ? reading.crypto : data.crypto} />

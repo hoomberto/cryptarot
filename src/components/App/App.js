@@ -8,8 +8,6 @@ import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal } from '../.
 import './App.css';
 
 const App = () => {
-
-  const [data, setData] = useState('')
   const [tarotData, setTarotData] = useState('')
 
   useEffect(() => {

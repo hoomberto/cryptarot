@@ -3,14 +3,14 @@
   height: 30px;
   border-radius: 50%;
   transform: translate(-5px, 5px);
-  /* margin: auto; */
 }
 
 .crypto-header-container {
   display: flex;
   justify-content: center;
   font-size: 22px;
-  /* transform: translateX(-22px); */
+  transform: translateX(-22px);
+  cursor: default;
 }
 
 .crypto-header-container h2 {
@@ -23,11 +23,10 @@
   justify-content: space-evenly;
 }
 
-
 .crypto-info {
   position: absolute;
   z-index: 2;
-  transform: translate(280px,0);
+  transform: translate(22px,50px);
   background: rgba(0,0,0, 0.85);
   color: white;
   padding: 0 10px;

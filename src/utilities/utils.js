@@ -7,26 +7,13 @@ const getRandomCard = (cards) => {
 }
 
 const getRandomCrypto = (data) => {
-    let random1 = data[getRandomIndex(data)]
-    let random2 = data[getRandomIndex(data)]
-    if (random1 === random2) {
-      random2 = data[getRandomIndex(data)]
-    }
-    return [random1, random2]
+  let random1 = data[getRandomIndex(data)]
+  let random2 = data[getRandomIndex(data)]
+  if (random1 === random2) {
+    random2 = data[getRandomIndex(data)]
+  }
+  return [random1, random2]
 }
-
-
-// const checkLocal = (response, resource) => {
-//   console.log("CHECKING RESOURCE", resource)
-//   const pastData = localStorage.getItem(`${resource}`)
-//   if (!pastData) {
-//     localStorage.setItem(`${resource}`, JSON.stringify(response))
-//     return false
-//   }
-//   else {
-//     return pastData
-//   }
-// }
 
 const setAllLocal = (data) => {
   setLocal('cards', data[0].cards)
@@ -35,7 +22,6 @@ const setAllLocal = (data) => {
 }
 
 const setLocal = (resource, data) => {
-  console.log("CHECKING RESOURCE", resource)
   localStorage.setItem(`${resource}`, JSON.stringify(data))
 }
 
