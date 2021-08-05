@@ -1,4 +1,4 @@
-/* section {
+section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,4 +8,4 @@
 img {
   height: 400px;
   width: 267px;
-} */
+}
