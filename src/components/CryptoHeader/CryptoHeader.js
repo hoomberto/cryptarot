@@ -4,7 +4,7 @@ const CryptoHeader = ({crypto}) => {
 
 const oneCrypto = () => {
   return (
-    <div className="crypto-header-container"><img className="logo" src={crypto[0].logo_url}/><h2>{crypto[0].name} <strong>({crypto[0].symbol})</strong></h2></div>
+    <div className="crypto-header-container"><img className="logo" alt={`${crypto[0].name} logo`}src={crypto[0].logo_url}/><h2>{crypto[0].name} <strong>({crypto[0].symbol})</strong></h2></div>
   )
 }
 
@@ -13,8 +13,8 @@ const oneCrypto = () => {
   const twoCryptos = () => {
     return (
       <div className="two-cryptos-container">
-        <div className="crypto-header-container"><img className="logo" src={crypto[0].logo_url}/><h2>{crypto[0].name} <strong>({crypto[0].symbol})</strong></h2></div>
-        <div className="crypto-header-container"><img className="logo" src={crypto[1].logo_url}/><h2>{crypto[1].name} <strong>({crypto[1].symbol})</strong></h2></div>
+        <div className="crypto-header-container"><img className="logo" src={crypto[0].logo_url} alt={`${crypto[0].name} logo`}/><h2>{crypto[0].name} <strong>({crypto[0].symbol})</strong></h2></div>
+        <div className="crypto-header-container"><img className="logo" src={crypto[1].logo_url} alt={`${crypto[1].name} logo`}/><h2>{crypto[1].name} <strong>({crypto[1].symbol})</strong></h2></div>
       </div>
     )
   }
