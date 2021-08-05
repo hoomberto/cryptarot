@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import CardChoice from '../CardChoice/CardChoice'
+import CryptosPage from '../CryptosPage/CryptosPage'
 import Landing from '../Landing/Landing'
 import { getData } from '../../utilities/apiCalls'
 import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal } from '../../utilities/utils'
@@ -44,7 +45,9 @@ const App = () => {
         return <CardChoice data={tarotData || false} />
 
       }} />
-      <Route exact path="/cryptos" component={CardChoice} />
+      <Route exact path="/cryptos" render={() => {
+        return <CryptosPage data={tarotData.cryptoData || false} />
+      }} />
     </Switch>
     </main>
   );

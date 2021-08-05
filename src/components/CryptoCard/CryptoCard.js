@@ -1,14 +1,12 @@
-const CryptoCard = ({ name, d1, d7, d30, d35, supply }) => {
+const CryptoCard = ({ name, d1, price }) => {
   return (
     <ul>
       <li>Name: {name}</li>
-      <li>24hr Price Change: {d1}</li>
-      <li>1wk Price Change: {d7}</li>
-      <li>1mo Price Change: {d30}</li>
-      <li>1yr Price Change: {d365}</li>
-      <li>Circulating Suppli: {supply}</li>
-    <ul/>
+      <li>Current Price: ${parseFloat(price).toFixed(2)}</li>
+      <li>24hr Price Change: {d1.price_change}</li>
+
+    </ul>
   )
 }
 
-export default CryptoCard 
+export default CryptoCard
