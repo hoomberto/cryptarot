@@ -1,5 +1,7 @@
 import React, { useState, useEffect }  from "react"
 import { getData } from '../../utilities/apiCalls'
+import {getRandomCard} from '../../utilities/utils'
+import {getRandomCrypto} from '../../utilities/utils'
 import Card from '../Card/Card'
 import CardInfo from '../CardInfo/CardInfo'
 import CryptoHeader from '../CryptoHeader/CryptoHeader'
@@ -21,16 +23,23 @@ const App = () => {
         currentCard: getRandomCard(data[0].cards),
         crypto: getRandomCrypto(data[1].slice(0, 100))
       })
-    })
+    }
+  })
   return () => {
     isMounted = false
   };
 }, [])
 
   return (
-    <div className="App">
-      
-    </div>
+    <main>
+      {!!tarotData &&
+        <section>
+          <CardInfo card={tarotData.currentCard} />
+          <CryptoHeader crypto={tarotData.crypto} />
+          <Card name={tarotData.currentCard.name_short} />
+        </section>
+      }
+    </main>
   );
 }
 
