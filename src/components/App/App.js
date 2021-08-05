@@ -1,4 +1,8 @@
 import React, { useState, useEffect }  from "react"
+import {
+  Route,
+  Link
+} from 'react-router-dom'
 import { getData } from '../../utilities/apiCalls'
 import { getRandomCard, getRandomCrypto } from '../../utilities/utils'
 import Card from '../Card/Card'
