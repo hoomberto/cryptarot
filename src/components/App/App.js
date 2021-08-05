@@ -10,6 +10,7 @@ import './App.css';
 const App = () => {
 
   const [tarotData, setTarotData] = useState('')
+  const [reading, setReading] = useState('')
 
   useEffect(() => {
   let isMounted = true
@@ -30,13 +31,21 @@ const App = () => {
   };
 }, [])
 
+  const newReading = () => {
+    setReading({
+      card: getRandomCard(tarotData.cards),
+      crypto: getRandomCrypto(tarotData.cryptoData)
+    })
+  }
+
   return (
     <main>
       {!!tarotData &&
         <section>
-          <CardInfo card={tarotData.currentCard} />
-          <CryptoHeader crypto={tarotData.crypto} />
-          <Card name={tarotData.currentCard.name_short} />
+          <CardInfo card={!!reading ? reading.card : tarotData.currentCard} />
+          <CryptoHeader crypto={!!reading ? reading.crypto : tarotData.crypto} />
+          <Card name={!!reading ? reading.card.name_short : tarotData.currentCard.name_short} />
+          <button onClick={newReading}>New Reading</button>
         </section>
       }
     </main>
