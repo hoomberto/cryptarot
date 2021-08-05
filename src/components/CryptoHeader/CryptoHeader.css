@@ -1,0 +1,33 @@
+.logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translate(-5px, 5px);
+  /* margin: auto; */
+}
+
+.crypto-header-container {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  /* transform: translateX(-22px); */
+}
+
+.crypto-header-container h2 {
+  margin: 0;
+}
+
+.two-cryptos-container {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+}
+
+
+strong {
+  display: inline;
+  position: absolute;
+  font-size: 14px;
+  transform: translate(6px, 12px);
+  /* margin: auto; */
+}
