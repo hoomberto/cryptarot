@@ -1,11 +1,12 @@
-const TableRow = (data) => {
+import './TableRow.css'
+
+const TableRow = ({data}) => {
   return (
     <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
+      <td className="table-name"><img style={{width: '20px', height: '20px'}} src={data.logo_url} alt={data.name} />{data.name} ({data.symbol})</td>
+      <td>{data.price}</td>
+      <td>{data.circulating_supply}</td>
+      <td>{data.max_supply}</td>
     </tr>
   )
 }
