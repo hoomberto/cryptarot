@@ -12,23 +12,23 @@ const CardChoice = () => {
   const [tarotData, setTarotData] = useState('')
 
   useEffect(() => {
-  let isMounted = true
-  getData()
-  .then(data => {
-    if (isMounted) {
-      setTarotData({
-        cards: data[0].cards,
-        cryptoData: data[1].slice(0, 100),
-        results: data[2].results,
-        currentCard: getRandomCard(data[0].cards),
-        crypto: getRandomCrypto(data[1].slice(0, 100))
-        })
-      }
-    })
-    return () => {
-      isMounted = false
-    };
-  }, [])
+    let isMounted = true
+    getData()
+    .then(data => {
+      if (isMounted) {
+        setTarotData({
+          cards: data[0].cards,
+          cryptoData: data[1].slice(0, 100),
+          results: data[2].results,
+          currentCard: getRandomCard(data[0].cards),
+          crypto: getRandomCrypto(data[1].slice(0, 100))
+          })
+        }
+      })
+      return () => {
+        isMounted = false
+      };
+    }, [])
 
   const newReading = () => {
     setReading({

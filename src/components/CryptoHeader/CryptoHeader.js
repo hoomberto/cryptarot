@@ -1,10 +1,27 @@
+import  React, { useState } from 'react'
+
 import './CryptoHeader.css'
 
 const CryptoHeader = ({crypto}) => {
+  const [hover, setHover] = useState(false);
+
 
 const oneCrypto = () => {
   return (
-    <div className="crypto-header-container"><img className="logo" alt={`${crypto[0].name} logo`}src={crypto[0].logo_url}/><h2>{crypto[0].name} <strong>({crypto[0].symbol})</strong></h2></div>
+    <div className="crypto-header-container"
+
+    onMouseEnter={() => setHover(true)}
+    onMouseLeave={() => setHover(false)}
+    >
+      <img className="logo" alt={`${crypto[0].name} logo`}src={crypto[0].logo_url}/>
+      <h2>{crypto[0].name} <strong>({crypto[0].symbol})</strong></h2>
+      {hover && (
+        <div className='crypto-info'>
+          <h3>{crypto[0].price}</h3>
+          <h3>{crypto[0].circulating_supply}</h3>
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -22,7 +39,7 @@ const oneCrypto = () => {
   const rand = Math.random() < 0.5
 
   return (
-    <div>{!!rand ? oneCrypto() : twoCryptos() }</div>
+    <div>{oneCrypto()}</div>
   )
 }
 
