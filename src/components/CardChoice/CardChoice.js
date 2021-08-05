@@ -27,7 +27,7 @@ const CardChoice = ({ data}) => {
           <Card name={!!reading ? reading.card.name_short : data.currentCard.name_short} clicked={clicked} setClicked={setClicked}/>
           <CryptoHeader crypto={!!reading ? reading.crypto : data.crypto} clicked={clicked}/>
           <CardInfo card={!!reading ? reading.card : data.currentCard} clicked={clicked} />
-          <button onClick={newReading}>New Reading</button>
+          {!clicked ? null : <button onClick={newReading}>New Reading</button>}
           <Link to="/"><button>Go Back</button></Link>
         </section>
       }

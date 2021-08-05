@@ -3,8 +3,7 @@ const CardInfo = ({card, clicked}) => {
     <>
     {!!clicked &&
       <div>
-      <h2>{card.name}</h2>
-      <h3>{card.type === "major" && card.value}</h3>
+      <h2>{card.type === "major" && `${card.value}`} {card.name}</h2>
       <h3>{card.description}</h3>
 
       </div>
