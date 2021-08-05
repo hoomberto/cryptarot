@@ -1,6 +1,6 @@
 // import {  } from '../../utilities/CryptosPageUtils'
 import CryptoCard from '../CryptoCard/CryptoCard'
-
+import { Link } from 'react-router-dom'
 const CryptosPage = ({ data }) => {
 
   const renderDesk = () => {
@@ -29,6 +29,7 @@ const CryptosPage = ({ data }) => {
 
   return (
     <>
+    <Link to="/"><button>Go Back</button></Link>
       {!data ? <h2>The spirits are crunching some numbers... </h2> : renderDesk()}
     </>
   )

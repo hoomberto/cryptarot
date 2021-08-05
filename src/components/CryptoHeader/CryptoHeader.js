@@ -2,7 +2,7 @@ import  React, { useState } from 'react'
 
 import './CryptoHeader.css'
 
-const CryptoHeader = ({crypto}) => {
+const CryptoHeader = ({crypto, clicked}) => {
   const [hover, setHover] = useState(false);
 
 
@@ -39,7 +39,8 @@ const oneCrypto = () => {
   // const rand = Math.random() < 0.5
 
   return (
-    <div>{oneCrypto()}</div>
+    <div>{!!clicked && oneCrypto()}</div>
+    // {!!clicked && <div>{oneCrypto()}</div>}
   )
 }
 

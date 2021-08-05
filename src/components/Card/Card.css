@@ -1,0 +1,9 @@
+img {
+  perspective: 500px;
+  transition: .3s ease all;
+  transform-style: preserve-3d;
+}
+
+.back:active {
+  transform: rotateY( 180deg ) ;
+}
