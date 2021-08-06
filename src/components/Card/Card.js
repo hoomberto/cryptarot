@@ -8,10 +8,8 @@ import { images } from '../../utilities/images'
 const Card = ({ name, clicked, setClicked}) => {
 
   const handleClick = () => {
-    setTimeout(() => {
       setClicked(true)
-    }, 50)
-  }
+    }
 
   // const front = () => {
   //   return <img className="front" src={images.find(image => image.includes(name))} alt={name} />
@@ -26,7 +24,11 @@ const Card = ({ name, clicked, setClicked}) => {
 
   }
 
-  return (<>{back()}</>)
+  return (
+    <>
+    {back()}
+    </>
+  )
 
 }
 

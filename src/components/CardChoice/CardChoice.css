@@ -8,4 +8,52 @@ section {
 img {
   height: 400px;
   width: 267px;
+  /* margin: 0 7%; */
+}
+
+.sun-graphic,
+.moon-graphic {
+  width: 170px;
+  height: 170px;
+  margin: 0;
+}
+
+.rays {
+  position: absolute;
+  z-index: 0;
+  width: 70vw;
+  opacity: 0.3;
+  /* height: 780px; */
+  /* width: 200px;
+  height: 300px; */
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.reading-container {
+  font-family: 'Grenze', serif;
+  width: 100vw;
+  color: white;
+  font-size: 22px;
+  padding: 2% 0 15% 0;
+  position: relative;
+  z-index: 1;
+}
+
+.graphic-block {
+  width: 25vw;
+  height: 45vh;
+  display: grid;
+  place-items: center;
+  background: blue;
+}
+
+.top-layer {
+  position: relative;
+  z-index: 1;
 }

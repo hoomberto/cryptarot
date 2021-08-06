@@ -3,6 +3,7 @@
   height: 30px;
   border-radius: 50%;
   transform: translate(-5px, 5px);
+  margin: 0;
 }
 
 .crypto-header-container {
@@ -11,6 +12,7 @@
   font-size: 22px;
   transform: translateX(-22px);
   cursor: default;
+  font-family: 'Roboto', sans-serif;
 }
 
 .crypto-header-container h2 {

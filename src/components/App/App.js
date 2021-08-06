@@ -5,11 +5,19 @@ import CryptosPage from '../CryptosPage/CryptosPage'
 import Landing from '../Landing/Landing'
 import { getData } from '../../utilities/apiCalls'
 import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal } from '../../utilities/utils'
-
 import './App.css';
 
 const App = () => {
   const [tarotData, setTarotData] = useState('')
+  // const [reading, setReading] = useState('')
+  // // const [clicked, setClicked] = useState(false)
+  // const newReading = () => {
+  //   // setClicked(false)
+  //   setReading({
+  //     currentCard: getRandomCard(tarotData.cards),
+  //     crypto: getRandomCrypto(tarotData.cryptoData)
+  //   })
+  // }
 
   useEffect(() => {
     let localResults = getCheckLocal();
@@ -35,7 +43,16 @@ const App = () => {
         crypto: getRandomCrypto(localResults[1])
       })
     }
+
   }, [])
+  //
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     newReading()
+  //   })
+  // }, [tarotData.crypto])
+
+
 
   return (
     <main>
