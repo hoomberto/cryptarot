@@ -11,7 +11,7 @@ const CryptosPage = ({ data }) => {
   const [query, setQuery] = useState('')
 
   const queryResults = (data) => {
-    return data.filter(d => d.name.toLowerCase().includes(query.toLowerCase()))
+    return data.filter(d => d.name.toLowerCase().includes(query.toLowerCase()) || d.symbol.toLowerCase().includes(query.toLowerCase()))
   }
 
   const renderTable = () => {

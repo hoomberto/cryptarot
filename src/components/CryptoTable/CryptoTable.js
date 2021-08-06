@@ -1,7 +1,19 @@
 import TableRow from  '../TableRow/TableRow'
 import './CryptoTable.css'
 const CryptoTable = ({data}) => {
-  const rows = data.map(d => <TableRow data={d} />)
+  const rows = data.map(d => {
+    return (
+      <TableRow
+        rank={d.rank}
+        logo={d.logo_url}
+        name={d.name}
+        symbol={d.symbol}
+        price={d.price}
+        circSupply={d.circulating_supply}
+        maxSupply={d.max_supply}
+      />
+    )
+  })
 
   return (
     <>{! data.length ? <h2>No results found - please try another search</h2> :
@@ -13,6 +25,7 @@ const CryptoTable = ({data}) => {
           <th>Price</th>
           <th>Circulating Supply</th>
           <th>Max Supply</th>
+          <th>Purchase Link</th>
         </tr>
         {rows}
       </tbody>

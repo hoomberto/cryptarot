@@ -9,6 +9,11 @@
   text-align: right;
 }
 
+.buy {
+  padding: 5px 30px;
+  cursor: pointer;
+}
+
 tr td {
   text-align: center;
 }
