@@ -3,11 +3,13 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background: linear-gradient(132deg, rgba(14,24,45,1) 0%, rgba(37,46,67,1) 100%);
 }
 
 img {
   height: 400px;
   width: 267px;
+  border-radius: 20px;
   /* margin: 0 7%; */
 }
 

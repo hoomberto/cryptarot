@@ -32,7 +32,7 @@ const CardChoice = ({ data, isNew, setIsNew, newTarotCard}) => {
   return  (
     <>
       {!data ? <h2>One moment - the spirits are gathering...</h2> :
-        <section>
+        <section style={{background: `url(${graphics[6]})`}}>
           <div className="card-container">
             <div style={{background: `url(${graphics[4]})`}} className="graphic-block">
               <img className="sun-graphic" src={`${graphics[2]}`} />

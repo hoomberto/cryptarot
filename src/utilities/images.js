@@ -101,12 +101,13 @@ import di14 from '../assets/images/di14.jpg';
 
 import bg from '../assets/graphics/bg.jpg';
 import bg2 from '../assets/graphics/bg2.jpg';
+import bg3 from '../assets/graphics/bg3.jpg';
 import logo from '../assets/graphics/logo.png'
 import sun from '../assets/graphics/sun.png'
 import moon from '../assets/graphics/moon.png'
 import rays from '../assets/graphics/rays.png'
 
-export const graphics = [bg, logo, sun, moon, bg2, rays]
+export const graphics = [bg, logo, sun, moon, bg2, rays, bg3]
 
 export const images = [
     reverse,
