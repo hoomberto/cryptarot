@@ -39,7 +39,7 @@ const oneCrypto = () => {
   // const rand = Math.random() < 0.5
 
   return (
-    <div>{!!clicked && oneCrypto()}</div>
+    <div style={{width: '100vw'}}>{!!clicked && oneCrypto()}</div>
     // {!!clicked && <div>{oneCrypto()}</div>}
   )
 }

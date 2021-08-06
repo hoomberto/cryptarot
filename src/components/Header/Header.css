@@ -1,3 +1,8 @@
 header {
+  display: flex;
+  justify-content: space-around;
   text-align: center;
+  align-items: center;
+  padding: 40px 0;
+  object-fit: cover;
 }

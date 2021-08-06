@@ -1,7 +1,17 @@
 img {
+  position: relative;
   perspective: 500px;
   transition: .3s ease all;
   transform-style: preserve-3d;
+  z-index: 0;
+}
+
+.border {
+  position: absolute;
+  width: 366px;
+  height: 480px;
+  place-self: center;
+  transform: translate(-50px, -40px);
 }
 
 .back:active {

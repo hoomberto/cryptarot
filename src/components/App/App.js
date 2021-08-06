@@ -4,12 +4,23 @@ import CardChoice from '../CardChoice/CardChoice'
 import CryptosPage from '../CryptosPage/CryptosPage'
 import Landing from '../Landing/Landing'
 import { getData } from '../../utilities/apiCalls'
+// import CardContext from '../../Context/CardContext';
 import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal } from '../../utilities/utils'
-
 import './App.css';
 
 const App = () => {
   const [tarotData, setTarotData] = useState('')
+  const [isNew, setIsNew] = useState(false)
+
+  // const [reading, setReading] = useState('')
+  // // const [clicked, setClicked] = useState(false)
+  // const newReading = () => {
+  //   // setClicked(false)
+  //   setReading({
+  //     currentCard: getRandomCard(tarotData.cards),
+  //     crypto: getRandomCrypto(tarotData.cryptoData)
+  //   })
+  // }
 
   useEffect(() => {
     let localResults = getCheckLocal();
@@ -35,14 +46,34 @@ const App = () => {
         crypto: getRandomCrypto(localResults[1])
       })
     }
+    return setIsNew(false)
   }, [])
+  //
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     newReading()
+  //   })
+  // }, [tarotData.crypto])
+  const newTarotCard = ({card, crypto}) => {
+    setTarotData({
+      ...tarotData,
+      currentCard: card,
+      crypto
+    })
+  }
+
 
   return (
     <main>
     <Switch>
     <Route exact path="/" component={Landing} />
       <Route exact path="/pick" render={() => {
-        return <CardChoice data={tarotData || false} />
+        return <CardChoice
+          data={tarotData || false}
+          isNew={isNew}
+          setIsNew={setIsNew}
+          newTarotCard={newTarotCard}
+          />
 
       }} />
       <Route exact path="/cryptos" render={() => {
