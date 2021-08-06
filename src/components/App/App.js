@@ -4,12 +4,14 @@ import CardChoice from '../CardChoice/CardChoice'
 import CryptosPage from '../CryptosPage/CryptosPage'
 import Landing from '../Landing/Landing'
 import { getData } from '../../utilities/apiCalls'
+// import CardContext from '../../Context/CardContext';
 import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal } from '../../utilities/utils'
 import './App.css';
 
 const App = () => {
   const [tarotData, setTarotData] = useState('')
   const [isNew, setIsNew] = useState(false)
+
   // const [reading, setReading] = useState('')
   // // const [clicked, setClicked] = useState(false)
   // const newReading = () => {

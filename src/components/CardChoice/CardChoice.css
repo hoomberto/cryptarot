@@ -30,6 +30,12 @@ img {
   height: 300px; */
 }
 
+.active-card-bg {
+  transition: .3s ease all;
+  background: linear-gradient(293deg, rgba(246,191,105,1) 0%, rgba(222,123,105,1) 100%);
+}
+
+
 .card-container {
   display: flex;
   align-items: center;

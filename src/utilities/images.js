@@ -106,8 +106,9 @@ import logo from '../assets/graphics/logo.png'
 import sun from '../assets/graphics/sun.png'
 import moon from '../assets/graphics/moon.png'
 import rays from '../assets/graphics/rays.png'
+import border from '../assets/graphics/border.png'
 
-export const graphics = [bg, logo, sun, moon, bg2, rays, bg3]
+export const graphics = [bg, logo, sun, moon, bg2, rays, bg3, border]
 
 export const images = [
     reverse,

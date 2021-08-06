@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import './Card.css'
 
-import { images } from '../../utilities/images'
+import { images, graphics } from '../../utilities/images'
 
 
 
@@ -16,12 +16,17 @@ const Card = ({ name, clicked, setClicked}) => {
   // }
 
   const back = () => {
-    return <img className={!clicked ? "back" : "front"}
+    return (
+
+    <div>
+      <img className="border" src={`${graphics[7]}`} />
+      <img className={!clicked ? "back" : "front"}
       src={!clicked ? images.find(image => image.includes('reverse')) : images.find(image => image.includes(name))}
       alt={name}
       onClick={handleClick}
       />
-
+    </div>
+    )
   }
 
   return (
