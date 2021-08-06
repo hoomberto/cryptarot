@@ -1,5 +1,14 @@
+table {
+  width: 100vw;
+}
 
 
 .heading {
   font-size: 22px;
+  text-align: center;
+}
+
+th {
+  background: maroon;
+  color: white;
 }
