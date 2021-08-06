@@ -9,6 +9,7 @@ import './App.css';
 
 const App = () => {
   const [tarotData, setTarotData] = useState('')
+  const [isNew, setIsNew] = useState(false)
   // const [reading, setReading] = useState('')
   // // const [clicked, setClicked] = useState(false)
   // const newReading = () => {
@@ -43,7 +44,7 @@ const App = () => {
         crypto: getRandomCrypto(localResults[1])
       })
     }
-
+    return setIsNew(false)
   }, [])
   //
   // useEffect(() => {
@@ -51,7 +52,13 @@ const App = () => {
   //     newReading()
   //   })
   // }, [tarotData.crypto])
-
+  const newTarotCard = ({card, crypto}) => {
+    setTarotData({
+      ...tarotData,
+      currentCard: card,
+      crypto
+    })
+  }
 
 
   return (
@@ -59,7 +66,12 @@ const App = () => {
     <Switch>
     <Route exact path="/" component={Landing} />
       <Route exact path="/pick" render={() => {
-        return <CardChoice data={tarotData || false} />
+        return <CardChoice
+          data={tarotData || false}
+          isNew={isNew}
+          setIsNew={setIsNew}
+          newTarotCard={newTarotCard}
+          />
 
       }} />
       <Route exact path="/cryptos" render={() => {
