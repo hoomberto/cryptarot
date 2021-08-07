@@ -43,8 +43,9 @@ const getCheckLocal = () => {
   let cards = JSON.parse(localStorage.getItem('cards'))
   let crypto = JSON.parse(localStorage.getItem('crypto'))
   let results = JSON.parse(localStorage.getItem('results'))
-  if (cards && crypto && results) {
-    return [cards, crypto, results]
+  let desc = JSON.parse(localStorage.getItem('desc'))
+  if (cards && crypto && results && desc) {
+    return [cards, crypto, results, desc]
   }
   return false
 }

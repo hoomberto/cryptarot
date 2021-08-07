@@ -45,11 +45,11 @@ const Results = ({result, crypto, card, image}) => {
           <div className="outer-img-container">
           <h2>{card.name}</h2>
             <div className="results-img-container">
-            <img
+            <Link to={`/tarot/${card.name_short}`}><img
             className="results-img"
             src={image}
             alt={card.name}
-            />
+            /></Link>
             </div>
           </div>
         </section>

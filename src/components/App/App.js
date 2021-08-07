@@ -6,6 +6,7 @@ import Landing from '../Landing/Landing'
 import CryptosInfo from '../CryptosInfo/CryptosInfo'
 import AllTarot from '../AllTarot/AllTarot'
 import Results from '../Results/Results'
+import TarotInfo from '../TarotInfo/TarotInfo'
 import { getData } from '../../utilities/apiCalls'
 import { getRelevantResults } from '../../utilities/ResultsUtils'
 import { images } from '../../utilities/images'
@@ -86,9 +87,17 @@ const App = () => {
           return <AllTarot
             images={images}
             tarot={!tarotData ? false : tarotData.cards.map(card => card.name_short)}
-
             />
-
+        }}
+      />
+    <Route exact path="/tarot/:name" render={({match}) => {
+          const { name } = match.params
+          return !tarotData
+          ? <Redirect to="" />
+          : <TarotInfo
+          card={tarotData.cards.find(card => card.name_short === name) || false}
+          url={images.find(image => image.includes(name))}
+          />
         }} />
       <Route exact path="/pick/results" render={() => {
           return (

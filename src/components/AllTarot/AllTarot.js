@@ -24,7 +24,7 @@ const AllTarot = ({ images, tarot }) => {
     <button onClick={shuffleCards}>Shuffle Cards</button>
     <section className="all-tarot">
       {!tarot ? <h2>Spreading the cards...</h2> : tarot.map(card => {
-        return <SingleTarot shuffled={shuffled} url={images.find(image => image.includes(card))} reverse={images.find(image => image.includes('reverse'))}/>
+        return <SingleTarot name={card} shuffled={shuffled} url={images.find(image => image.includes(card))} reverse={images.find(image => image.includes('reverse'))}/>
       })}
     </section>
     </>
