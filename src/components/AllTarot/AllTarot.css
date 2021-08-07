@@ -1,7 +1,27 @@
 .all-tarot {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(13, 1fr);
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-gap: 1.4em;
   padding: 2% 3%;
+}
+
+@media screen and (max-width: 1900px) {
+  .all-tarot {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .all-tarot {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(26, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .all-tarot {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(39, 1fr);
+  }
 }

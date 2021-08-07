@@ -16,17 +16,12 @@ img {
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 body {
-  height: 100%;
-  background: rgb(207,184,255);
-  background: linear-gradient(48deg, rgba(207,184,255,1) 0%, rgba(51,22,92,1) 100%);
+  /* height: 100%; */
+  background: rgba(51,22,92,1);
 }
 
 main {
+  background: rgb(207,184,255);
+  background: linear-gradient(48deg, rgba(207,184,255,1) 0%, rgba(51,22,92,1) 100%);
   height: 100%;
-}
-
-@media screen and (max-width: 600px) {
-  main {
-    height: 90vh;
-  }
 }

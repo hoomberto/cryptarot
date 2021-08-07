@@ -1,7 +1,7 @@
 import './Header.css'
 import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { graphics } from '../../utilities/images'
+import { graphics, icons } from '../../utilities/images'
 
 const Header = () => {
 
@@ -9,18 +9,23 @@ const Header = () => {
 
   return (
     <header>
-      <Link style={{textDecoration: 'none'}} to="/"><h1>CRYPTAROT</h1></Link>
+      <Link to="/"><h1>CRYPTAROT</h1></Link>
       <div className="links">
-        <Link to="/cryptos">View Cryptocurrencies</Link>
-        <Link to="/about">About</Link>
+        <Link to="/pick">Get a Reading</Link>
+        <Link to="/cryptos">View Cryptos</Link>
+        <Link to="/tarot">View Tarot</Link>
       </div>
-      <button onClick={() => setClicked(true)} className={!clicked ? 'menu' : 'hidden-menu'}>Menu</button>
+      <button onClick={() => setClicked(true)} className={!clicked ? 'menu' : 'hidden-menu'}>
+        <img className="menu-icon" src={icons[11]} alt="menu" />
+      </button>
       <div className={!clicked ? 'hidden-menu' : 'active-menu'} >
-      <button onClick={() => setClicked(false)}>Close menu</button>
+      <button className="close-btn" onClick={() => setClicked(false)}>
+        <img className="menu-icon close" src={icons[12]} alt="close" />
+      </button>
         <ul>
-          <li><Link to="/cryptos">View Cryptocurrencies</Link></li>
-          <li><Link to="/tarot">View Tarot</Link></li>
-          <li><Link to="/about">About</Link></li>
+          <li onClick={() => setClicked(false)}><Link to="/cryptos">View Cryptocurrencies</Link></li>
+          <li onClick={() => setClicked(false)}><Link to="/tarot">View Tarot</Link></li>
+          <li onClick={() => setClicked(false)}><Link to="/pick">Get a Reading</Link></li>
         </ul>
       </div>
     </header>

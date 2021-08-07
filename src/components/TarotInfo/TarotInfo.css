@@ -10,6 +10,8 @@
 
 .up, .rev {
   transition: .2s ease all;
+  max-width: 100%;
+  height: auto;
 }
 
 .up:hover {
@@ -22,6 +24,9 @@
 
 
 .t-info-section {
-  background: #f8b936;
-  font-family: 'Grenze', serif;
+  /* background: #f8b936; */
+  padding: 5%;
+  font-family: 'Righteous', cursive;
+  color: white;
+  text-align: center;
 }

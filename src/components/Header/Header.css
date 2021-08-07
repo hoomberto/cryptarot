@@ -12,6 +12,25 @@ header {
   font-family: 'Righteous', cursive;
 }
 
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+.menu-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 0;
+  margin-left: -65%;
+}
+
+.close {
+  width: 25px;
+  height: 25px;
+  transform: translate(-8px, 10px);
+}
+
 header h1 {
   font-size: 60px;
 }
@@ -26,23 +45,29 @@ a {
   text-decoration: none;
 }
 
-.menu {
-  display: none;
-}
-
-.hidden-menu {
-  display: none;
-}
-
+.menu,
+.hidden-menu,
 .active-menu {
   display: none;
+  cursor: pointer;
 }
+
+.active-menu button {
+  text-align: right;
+}
+
 
 ul {
   list-style-type: none;
 }
 
 @media screen and (max-width: 600px) {
+  .links {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
 
   header {
     justify-content: space-between;
@@ -57,6 +82,12 @@ ul {
 
   .menu {
     display: block;
+    background: none;
+    border: none;
+  }
+
+  ul li {
+    margin: 2% 5% 0 0;
   }
 
   .active-menu {
@@ -67,9 +98,16 @@ ul {
     flex-direction: column;
     background: white;
     width: 50%;
+    top: 0;
+    text-align: right;
+    border-radius: 8px;
+    /* background: none; */
   }
 
-  .links {
-    display: none;
+  .close-btn {
+    background: none;
+    border: none;
   }
+
+
 }

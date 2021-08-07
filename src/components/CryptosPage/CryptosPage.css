@@ -1,7 +1,12 @@
 .table-container {
-  height: 60vh;
   overflow-y: auto;
+  height: 80vh;
 }
+
+/* table > tbody > tr > td > button {
+  background: none,
+} */
+
 
 .button-search-bar-ctr {
   display: flex;
@@ -10,9 +15,9 @@
   justify-content: center;
   align-items: center;
 }
-
+table > tbody > tr > td > a > button,
 .button-search-bar-ctr button {
-  margin-right: 50px;
+  /* margin-right: 50px; */
   width: 160px;
   color: white;
   background: none;
@@ -22,6 +27,7 @@
   transition: .2s ease all;
 }
 
+table > tbody > tr > td > a > button:hover,
 .button-search-bar-ctr button:hover {
   color: rgba(51,22,92,1);
   background: rgba(255, 255, 255, 0.85);

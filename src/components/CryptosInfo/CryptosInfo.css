@@ -1,17 +1,16 @@
 .expanded-table {
   /* table-layout: fixed; */
-  background: lightgray;
+  background: none;
   color: black;
   width: 100%;
 }
 
 .expanded-table tr:nth-child(odd), .over-time tr:nth-child(odd) {
-  background: lightgray;
-  color: black;
+  background: #F9CE77;
+  color: rgba(51,22,92,1);
 }
 
 .expanded-table tr:nth-child(even), .over-time tr:nth-child(even) {
-  background: #2d2d2d;
   color: white;
 }
 
@@ -19,6 +18,8 @@
   color: white;
   overflow-x: auto;
   width: 100%;
+  padding-bottom: 11%;
+  text-align: center;
 }
 
 .info-logo {

@@ -4,6 +4,7 @@ input {
   border-bottom: 1px solid white;
   width: 300px;
   color: white;
+  margin-left: 5vw;
 }
 
 input::placeholder {

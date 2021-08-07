@@ -122,6 +122,8 @@ import viewActiveIcon from '../assets/icons/view-active.png'
 import crypto from '../assets/icons/crypto.png'
 import cryptoActive from '../assets/icons/crypto-active.png'
 import loading from '../assets/icons/loading.png'
+import menu from '../assets/icons/menu.png'
+import close from '../assets/icons/close.png'
 
 export const icons = [
   deckIcon,
@@ -130,11 +132,13 @@ export const icons = [
   tarotActiveIcon,
   shuffleIcon,
   shuffleActiveIcon,
-  viewIcon, 
+  viewIcon,
   viewActiveIcon,
   crypto,
   cryptoActive,
-  loading
+  loading,
+  menu,
+  close
 ]
 
 export const graphics = [bg, logo, sun, moon, bg2, rays, bg3, border]

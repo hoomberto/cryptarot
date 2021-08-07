@@ -20,7 +20,7 @@ const getCryptoData = () => {
 }
 
 const getDailyCard = () => {
-  return fetch('https://cryptarot-api.herokuapp.com/api/v1/hourly')
+  return fetch('https://cryptarot-api.herokuapp.com/api/v1/daily')
   .then(checkResponse)
 }
 
