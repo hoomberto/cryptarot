@@ -9,6 +9,7 @@ table {
 }
 
 th {
-  background: maroon;
+  background: rgba(51,22,92,1);
+  font-family: 'Righteous', cursive;
   color: white;
 }

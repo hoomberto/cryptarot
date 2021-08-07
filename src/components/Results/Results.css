@@ -3,14 +3,18 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 5% 0;
-  background: #f8b936;
   font-family: 'Righteous', cursive;
   text-align: center;
+  color: white;
 }
 
 .result-tagline {
   width: 20%;
   font-size: 22px;
+}
+
+.results-img-ctr {
+  height: 80vh;
 }
 
 

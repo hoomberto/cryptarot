@@ -43,7 +43,7 @@ const CardChoice = ({ data, isNew, setIsNew, newTarotCard}) => {
               <img className="moon-graphic" src={`${graphics[3]}`} />
             </div>
           </div>
-          {<section className="reading-container" style={{background: `linear-gradient(132deg, rgba(14,24,45,1) 0%, rgba(37,46,67,1) 100%)`}}>
+          {<section className="reading-container">
             {!clicked ? <h3>Click the card to see your reading</h3> : null}
 
             <CryptoHeader crypto={!!reading && isNew ? reading.crypto : data.crypto} clicked={clicked}/>

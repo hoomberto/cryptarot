@@ -35,7 +35,7 @@ const Results = ({result, crypto, card, image}) => {
   return (
     <>
       {!!choice && !!crypto && !!card &&
-        <>
+        <div className="results-img-ctr">
         <section className="results-container">
           <div className="result-tagline">
             <h2 className="tagline">{result.tagline}</h2>
@@ -58,7 +58,7 @@ const Results = ({result, crypto, card, image}) => {
           <Link style={{textDecoration: 'none'}} to="/pick"><button>New Reading</button></Link>
           <Link style={{textDecoration: 'none'}} to="/"><button>Go Home</button></Link>
         </section>
-        </>
+      </div>
       }
     </>
   )

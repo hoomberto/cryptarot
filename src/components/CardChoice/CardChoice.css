@@ -50,7 +50,7 @@ img {
 
 .active-card-bg {
   transition: .3s ease all;
-  background: linear-gradient(293deg, rgba(45,45,45,1) 0%, rgba(29,29,29,1) 100%);
+  /* background: linear-gradient(293deg, rgba(45,45,45,1) 0%, rgba(29,29,29,1) 100%); */
   /* background: linear-gradient(293deg, rgba(246,191,105,1) 0%, rgba(222,123,105,1) 100%); */
 }
 
@@ -59,7 +59,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  padding: 2% 10%;
 }
 
 .reading-container {
@@ -77,8 +77,6 @@ img {
   height: 45vh;
   display: grid;
   place-items: center;
-  /* background: #244c41; */
-  /* background: linear-gradient(293deg, rgba(45,45,45,1) 0%, rgba(29,29,29,1) 100%); */
 }
 
 .top-layer {
@@ -87,7 +85,7 @@ img {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .graphic-block {
     display: none;
   }

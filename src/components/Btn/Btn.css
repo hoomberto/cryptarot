@@ -7,8 +7,17 @@
 .view-results {
   padding: 2px 84px;
   cursor: pointer;
+  background: none;
+  border: 2px solid white;
+  border-radius: 4px;
 }
 
 button div p {
   margin: 2% 0;
+}
+
+@media screen and (max-width: 600px) {
+  .view-results {
+    padding: 2px;
+  }
 }

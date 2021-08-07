@@ -20,3 +20,7 @@ body {
   background: rgb(207,184,255);
   background: linear-gradient(48deg, rgba(207,184,255,1) 0%, rgba(51,22,92,1) 100%);
 }
+
+main {
+  height: 100%;
+}

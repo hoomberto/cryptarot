@@ -19,3 +19,21 @@
   margin: 5% 0;
   transition: transform .2s;
 }
+
+@media screen and (max-width: 600px) {
+  .main-ctr {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-links-ctr {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .main-links-ctr a button {
+    padding: 20px;
+    width: 100px;
+    margin: 0 5vw;
+  }
+}
