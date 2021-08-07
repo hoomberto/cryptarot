@@ -9,9 +9,9 @@ img {
 .border {
   position: absolute;
   width: 366px;
-  height: 480px;
+  height: 500px;
   place-self: center;
-  transform: translate(-50px, -40px);
+  transform: translate(-50px, -50px);
 }
 
 .back:active {

@@ -12,9 +12,13 @@ const getCryptoData = () => {
   .then(checkResponse)
 }
 
+const getDailyCard = () => {
+  return fetch('https://cryptarot-api.herokuapp.com/api/v1/hourly')
+  .then(checkResponse)
+}
+
 const getResults = () => {
   return fetch('https://cryptarot-api.herokuapp.com/api/v1/results')
-  // .then(checkResponse(response, 'results'))
   .then(checkResponse)
 }
 
@@ -31,4 +35,4 @@ const getData = () => {
   return Promise.all([getCards(), getCryptoData(), getResults()])
 }
 
-export { getData }
+export { getData,  getDailyCard}

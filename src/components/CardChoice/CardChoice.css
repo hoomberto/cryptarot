@@ -10,7 +10,33 @@ img {
   height: 400px;
   width: 267px;
   border-radius: 20px;
+  transition: .2s ease all;
   /* margin: 0 7%; */
+}
+
+
+.back:hover {
+  box-shadow:
+  inset 0 0 50px #fff,
+  inset 20px 0 80px #f0f,
+  inset -20px 0 80px #ffff00,
+  inset 20px 0 300px #f0f,
+  inset -20px 0 300px #ffff00,
+  0 0 50px #fff,
+  -10px 0 80px #f0f,
+  10px 0 80px #ffff00;
+}
+
+.front:hover {
+  box-shadow:
+  inset 0 0 50px #fff,      /* inner white */
+  inset 20px 0 80px #f0f,   /* inner left magenta short */
+  inset -20px 0 80px #0ff,  /* inner right cyan short */
+  inset 20px 0 300px #f0f,  /* inner left magenta broad */
+  inset -20px 0 300px #0ff, /* inner right cyan broad */
+  0 0 50px #fff,            /* outer white */
+  -10px 0 80px #f0f,        /* outer left magenta */
+  10px 0 80px #0ff;         /* outer right cyan */
 }
 
 .sun-graphic,
@@ -32,7 +58,8 @@ img {
 
 .active-card-bg {
   transition: .3s ease all;
-  background: linear-gradient(293deg, rgba(246,191,105,1) 0%, rgba(222,123,105,1) 100%);
+  background: linear-gradient(293deg, rgba(45,45,45,1) 0%, rgba(29,29,29,1) 100%);
+  /* background: linear-gradient(293deg, rgba(246,191,105,1) 0%, rgba(222,123,105,1) 100%); */
 }
 
 
@@ -58,10 +85,25 @@ img {
   height: 45vh;
   display: grid;
   place-items: center;
-  background: blue;
+  /* background: #244c41; */
+  /* background: linear-gradient(293deg, rgba(45,45,45,1) 0%, rgba(29,29,29,1) 100%); */
 }
 
 .top-layer {
   position: relative;
   z-index: 1;
+}
+
+
+@media screen and (max-width: 600px) {
+  .graphic-block {
+    display: none;
+  }
+
+  .card-container {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+
+  }
 }

@@ -4,12 +4,12 @@ import { graphics } from '../../utilities/images'
 
 const Header = () => {
   return (
-    <header style={{background: `linear-gradient(132deg, rgba(14,24,45,1) 0%, rgba(37,46,67,1) 100%)`}}>
-      <Link to="/"><img style={{width: '300px', height: 'auto'}} src={`${graphics[1]}`} /></Link>
+    <header>
+      <Link style={{textDecoration: 'none'}} to="/"><h1>CRYPTAROT</h1></Link>
 
       <div>
-        <NavLink to="/cryptos">View Cryptocurrencies</NavLink>
-        <NavLink to="/about">About</NavLink>
+        <Link style={{textDecoration: 'none'}} to="/cryptos">View Cryptocurrencies</Link>
+        <Link style={{textDecoration: 'none'}} to="/about">About</Link>
       </div>
     </header>
   )

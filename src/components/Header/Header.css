@@ -5,4 +5,21 @@ header {
   align-items: center;
   padding: 40px 0;
   object-fit: cover;
+  background: #244c41;
+  color: white;
+  font-family: 'Grenze', serif;
+}
+
+header h1 {
+  font-size: 60px;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
