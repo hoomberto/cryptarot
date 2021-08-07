@@ -3,9 +3,13 @@ import { Route, Switch } from 'react-router-dom'
 import CardChoice from '../CardChoice/CardChoice'
 import CryptosPage from '../CryptosPage/CryptosPage'
 import Landing from '../Landing/Landing'
+import Results from '../Results/Results'
 import { getData } from '../../utilities/apiCalls'
+import { getRelevantResults } from '../../utilities/ResultsUtils'
+import { images } from '../../utilities/images'
+
 // import CardContext from '../../Context/CardContext';
-import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal } from '../../utilities/utils'
+import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal, getRandomElement } from '../../utilities/utils'
 import './App.css';
 
 const App = () => {
@@ -76,6 +80,26 @@ const App = () => {
           />
 
       }} />
+      <Route exact path="/pick/results" render={() => {
+          return (
+            <>
+
+            {
+              !tarotData ? <h2>Loading...</h2> : <Results
+              result={getRandomElement(getRelevantResults(tarotData.currentCard.meaning_weight, tarotData.currentCard.keywords, tarotData.results)) || getRandomElement(tarotData.results)}
+              crypto={tarotData.crypto.map(crypto => {
+                return {name: crypto.name,
+                symbol: crypto.symbol}
+              })}
+              card={tarotData.currentCard}
+              image={images.find(image => image.includes(tarotData.currentCard.name_short))}
+              />
+            }
+            </>
+          )
+        }
+      }
+        />
       <Route exact path="/cryptos" render={() => {
         return <CryptosPage data={tarotData.cryptoData || false} />
       }} />

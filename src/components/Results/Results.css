@@ -1,0 +1,39 @@
+.results-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5% 0;
+  background: #f8b936;
+  font-family: 'Grenze', serif;
+}
+
+.result-tagline {
+  width: 20%;
+}
+
+.results-img-container {
+  padding: 10px 20px;
+  border: 4px solid #244c41;
+}
+
+/* .outer-img-container {
+  padding: 40px 40px;
+  border: 4px solid #244c41;
+
+} */
+
+.results-img {
+  height: 10%;
+  width: 100%;
+  border-radius: 4%;
+}
+
+.results-btns {
+  padding: 40px 0;
+  width: 100%;
+}
+
+.results-btns button {
+  padding: 20px;
+  width: 200px;
+}

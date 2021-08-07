@@ -3,6 +3,10 @@ const getRandomIndex = (array) => {
   return Math.floor(Math.random() * array.length)
 }
 
+const getRandomElement = (array) => {
+  return array[getRandomIndex(array)]
+}
+
 const getRandomCard = (cards) => {
   return cards[getRandomIndex(cards)]
 }
@@ -37,4 +41,4 @@ const getCheckLocal = () => {
 }
 
 
-export { getRandomCard, getRandomCrypto, setAllLocal, getCheckLocal }
+export { getRandomElement, getRandomCard, getRandomCrypto, setAllLocal, getCheckLocal }
