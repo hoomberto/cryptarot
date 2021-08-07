@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getDailyCard } from '../../utilities/apiCalls'
 import { images } from '../../utilities/images'
+import './CardOfDay.css'
 
 const CardOfDay = () => {
 
@@ -12,11 +13,11 @@ const CardOfDay = () => {
   }, [])
 
   return (
-    <>{!!card && <div>
+    <>{!!card && <div className="card-of-day-ctr">
       <h2>Card of the Day</h2>
-        <h3>{card.name}</h3>
-        <img src={images.find(image => image.includes(card.name_short))} alt={card.name} />
-        <h3>{card.description}</h3>
+        <p>{card.name}</p>
+        <img className="cod" src={images.find(image => image.includes(card.name_short))} alt={card.name} />
+        <p>{card.description}</p>
       </div>}
     </>
   )
