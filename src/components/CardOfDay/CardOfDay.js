@@ -15,9 +15,9 @@ const CardOfDay = () => {
   return (
     <>{!!card && <div className="card-of-day-ctr">
       <h2>Card of the Day</h2>
-        <p>{card.name}</p>
+        <p className="cod-name">{card.name}</p>
         <img className="cod" src={images.find(image => image.includes(card.name_short))} alt={card.name} />
-        <p>{card.description}</p>
+        <p className="cod-desc">{card.description}</p>
       </div>}
     </>
   )

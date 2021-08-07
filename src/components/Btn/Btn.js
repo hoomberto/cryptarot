@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { icons } from '../../utilities/images'
+// import { icons } from '../../utilities/images'
 import './Btn.css'
 
 
@@ -13,8 +13,11 @@ const ResultsBtn = ({ icon, active, url, alt }) => {
         className="view-results"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        >
-        <img className="icon" src={!hover ? icon : active} alt={alt} />
+          >
+          <div>
+            <p>{alt}</p>
+            <img className="icon" src={!hover ? icon : active} alt={alt} />
+          </div>
       </button>
     </Link>
   )

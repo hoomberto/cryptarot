@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 5%;
   font-family: 'Righteous', cursive;
   font-weight: 400;
 }
@@ -13,4 +13,15 @@
 .cod {
   max-width: 100%;
   height: auto;
+}
+
+.cod-name {
+
+}
+
+.cod-desc {
+  width: 50%;
+  text-align: justify;
+  border: 4px solid white;
+  padding: 20px;
 }

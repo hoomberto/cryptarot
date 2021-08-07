@@ -5,12 +5,14 @@
   padding: 5% 0;
   background: #f8b936;
   font-family: 'Righteous', cursive;
+  text-align: center;
 }
 
 .result-tagline {
   width: 20%;
   font-size: 22px;
 }
+
 
 .results-img-container {
   padding: 10px 20px;

@@ -119,8 +119,11 @@ import shuffleIcon from '../assets/icons/shuffle.png'
 import shuffleActiveIcon from '../assets/icons/shuffle-active.png'
 import viewIcon from '../assets/icons/view.png'
 import viewActiveIcon from '../assets/icons/view-active.png'
+import crypto from '../assets/icons/crypto.png'
+import cryptoActive from '../assets/icons/crypto-active.png'
 
-export const icons = [deckIcon, deckActiveIcon, tarotIcon, tarotActiveIcon, shuffleIcon, shuffleActiveIcon, viewIcon, viewActiveIcon]
+
+export const icons = [deckIcon, deckActiveIcon, tarotIcon, tarotActiveIcon, shuffleIcon, shuffleActiveIcon, viewIcon, viewActiveIcon, crypto, cryptoActive]
 
 export const graphics = [bg, logo, sun, moon, bg2, rays, bg3, border]
 

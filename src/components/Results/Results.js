@@ -38,6 +38,7 @@ const Results = ({result, crypto, card, image}) => {
         <>
         <section className="results-container">
           <div className="result-tagline">
+            <h2 className="tagline">{result.tagline}</h2>
             {formatResults(choice, card.keywords, crypto)[0]}
           <div>{renderCryptos()}</div>
         </div>

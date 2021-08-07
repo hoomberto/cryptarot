@@ -15,4 +15,6 @@
 .main-links-ctr a button {
   padding: 20px;
   width: 200px;
+  margin: 5% 0;
+  transition: transform .2s;
 }
