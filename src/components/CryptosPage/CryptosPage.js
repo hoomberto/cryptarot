@@ -17,7 +17,10 @@ const CryptosPage = ({ data }) => {
   const renderTable = () => {
     return (
       <>
-      <SearchBar query={query} set={setQuery} />
+      <div className='button-search-bar-ctr'>
+        <Link to="/"><button>Go Back</button></Link>
+        <SearchBar query={query} set={setQuery} />
+      </div>
         <div className="table-container">
           {!query ? <CryptoTable data={data} /> : <CryptoTable data={queryResults(data)} />}
         </div>
@@ -42,7 +45,6 @@ const CryptosPage = ({ data }) => {
 
   return (
     <>
-    <Link to="/"><button>Go Back</button></Link>
       {!data ? <h2>The spirits are crunching some numbers... </h2> : renderTable()}
     </>
   )

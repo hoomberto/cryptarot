@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 80vh;
 }
 
 .main-links-ctr {
@@ -17,7 +16,12 @@
   padding: 20px;
   width: 200px;
   margin: 5% 0;
-  transition: transform .2s;
+  transition: .2s ease all;
+}
+
+.main-links-ctr a button:hover {
+  color: rgba(51,22,92,1);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 @media screen and (max-width: 600px) {
@@ -27,6 +31,7 @@
   }
 
   .main-links-ctr {
+    margin-top: 5%;
     flex-direction: row;
     width: auto;
   }
@@ -35,5 +40,11 @@
     padding: 20px;
     width: 100px;
     margin: 0 5vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-links-ctr {
+    display: none;
   }
 }
