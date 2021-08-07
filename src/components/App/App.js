@@ -9,7 +9,7 @@ import Results from '../Results/Results'
 import TarotInfo from '../TarotInfo/TarotInfo'
 import { getData } from '../../utilities/apiCalls'
 import { getRelevantResults } from '../../utilities/ResultsUtils'
-import { images } from '../../utilities/images'
+import { images, icons, graphics } from '../../utilities/images'
 
 // import CardContext from '../../Context/CardContext';
 import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal, getRandomElement } from '../../utilities/utils'
@@ -40,7 +40,7 @@ const App = () => {
             cryptoData: data[1].slice(0, 100),
             results: data[2].results,
             currentCard: getRandomCard(data[0].cards),
-            crypto: getRandomCrypto(data[1].slice(0, 100))
+            crypto: getRandomCrypto(data[1].slice(0, 150))
         })
       })
     }
@@ -87,6 +87,8 @@ const App = () => {
           return <AllTarot
             images={images}
             tarot={!tarotData ? false : tarotData.cards.map(card => card.name_short)}
+            icons={[icons[4], icons[5]]}
+            loadingImage={icons[10]}
             />
         }}
       />

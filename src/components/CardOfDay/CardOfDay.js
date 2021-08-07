@@ -1,25 +1,35 @@
 import React, { useState, useEffect } from 'react'
+import Loading from '../Loading/Loading'
 import { getDailyCard } from '../../utilities/apiCalls'
-import { images } from '../../utilities/images'
+import { images, icons } from '../../utilities/images'
 import './CardOfDay.css'
 
-const CardOfDay = () => {
+const CardOfDay = ({ loading }) => {
 
   const [card, setCard] = useState('')
+  const [errMsg, setErrMsg] = useState('')
+
 
   useEffect(() => {
-    getDailyCard()
-    .then(data => setCard(data.card))
+    let isMounted = true;
+    const fetchData = async () => {
+      const response = await getDailyCard()
+      setCard(response.card)
+    }
+    fetchData()
+    return () => {
+      isMounted = false;
+    }
   }, [])
 
   return (
-    <>{!!card && <div className="card-of-day-ctr">
-      <h2>Card of the Day</h2>
+    <div className="cod-ctr"><h2>Card of the Day</h2>
+    {!card ? <Loading image={icons[10]} message="Summoning card of the day..." /> : <div className="card-of-day-ctr">
         <p className="cod-name">{card.name}</p>
         <img className="cod" src={images.find(image => image.includes(card.name_short))} alt={card.name} />
         <p className="cod-desc">{card.description}</p>
       </div>}
-    </>
+    </div>
   )
 
 }

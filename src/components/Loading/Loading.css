@@ -1,11 +1,23 @@
 @keyframes rotating {
   from {
-    transform: rotate(0deg);
-  }
-  to {
     transform: rotate(360deg);
   }
+  to {
+    transform: rotate(-deg);
+  }
 }
+
+.loading {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .rotating {
   animation: rotating 1s linear infinite;
+  width: 100px;
+  height: 100px;
 }

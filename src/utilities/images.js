@@ -107,7 +107,7 @@ import sun from '../assets/graphics/sun.png'
 import moon from '../assets/graphics/moon.png'
 import rays from '../assets/graphics/rays.png'
 import border from '../assets/graphics/border.png'
-
+// import loading from '../assets/graphics/loading.png'
 
 // Icons
 
@@ -121,9 +121,21 @@ import viewIcon from '../assets/icons/view.png'
 import viewActiveIcon from '../assets/icons/view-active.png'
 import crypto from '../assets/icons/crypto.png'
 import cryptoActive from '../assets/icons/crypto-active.png'
+import loading from '../assets/icons/loading.png'
 
-
-export const icons = [deckIcon, deckActiveIcon, tarotIcon, tarotActiveIcon, shuffleIcon, shuffleActiveIcon, viewIcon, viewActiveIcon, crypto, cryptoActive]
+export const icons = [
+  deckIcon,
+  deckActiveIcon,
+  tarotIcon,
+  tarotActiveIcon,
+  shuffleIcon,
+  shuffleActiveIcon,
+  viewIcon, 
+  viewActiveIcon,
+  crypto,
+  cryptoActive,
+  loading
+]
 
 export const graphics = [bg, logo, sun, moon, bg2, rays, bg3, border]
 

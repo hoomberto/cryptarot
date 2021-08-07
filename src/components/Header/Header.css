@@ -5,8 +5,10 @@ header {
   align-items: center;
   padding: 40px 0;
   object-fit: cover;
-  background: #244c41;
-  color: white;
+  /* background: rgb(196,170,245);
+  background: linear-gradient(56deg, #fc4a1a 0%, #f7b733 100%); */
+  background: rgba(51,22,92,1);
+  color: #F9CE77;
   font-family: 'Righteous', cursive;
 }
 

@@ -5,6 +5,14 @@
   padding: 0 5%;
   font-family: 'Righteous', cursive;
   font-weight: 400;
+  color: white;
+}
+
+.cod-ctr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
 }
 .card-of-day-ctr > p {
   font-size: 22px;
