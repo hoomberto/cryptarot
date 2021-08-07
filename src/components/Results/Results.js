@@ -12,12 +12,36 @@ const Results = ({result, crypto, card, image}) => {
     if (result) setChoice(getRandomElement(result.result_choices))
   }, [])
 
+  const renderCryptos = () => {
+    let formatted;
+    if (choice && crypto && card) {
+      formatted = formatResults(choice, card.keywords, crypto)
+      if (formatted[1] > 1) {
+        return (
+          <div>
+            <Link to={`/cryptos/${crypto[0].id}`}>
+              <h3>{crypto[0].name}</h3>
+            </Link>
+            <Link to={`/cryptos/${crypto[1].id}`}>
+              <h3>{crypto[1].name}</h3>
+            </Link>
+          </div>
+        )
+      }
+      return (<Link to={`/cryptos/${crypto[0].id}`}><h3>{crypto[0].name}</h3></Link>)
+    }
+  }
+
   return (
     <>
       {!!choice && !!crypto && !!card &&
         <>
         <section className="results-container">
-          <div className="result-tagline">{formatResults(choice, card.keywords, crypto)}</div>
+          <div className="result-tagline">
+            {formatResults(choice, card.keywords, crypto)}
+          <div>{renderCryptos()}</div>
+        </div>
+
           <div className="outer-img-container">
           <h2>{card.name}</h2>
             <div className="results-img-container">

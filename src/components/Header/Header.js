@@ -5,11 +5,11 @@ import { graphics } from '../../utilities/images'
 const Header = () => {
   return (
     <header>
-      <Link to="/"><img style={{width: '300px', height: 'auto'}} src={`${graphics[1]}`} /></Link>
+      <Link style={{textDecoration: 'none'}} to="/"><h1>CrypTarot</h1></Link>
 
       <div>
-        <NavLink to="/cryptos">View Cryptocurrencies</NavLink>
-        <NavLink to="/about">About</NavLink>
+        <Link style={{textDecoration: 'none'}} to="/cryptos">View Cryptocurrencies</Link>
+        <Link style={{textDecoration: 'none'}} to="/about">About</Link>
       </div>
     </header>
   )

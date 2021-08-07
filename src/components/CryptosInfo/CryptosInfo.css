@@ -1,0 +1,33 @@
+.expanded-table {
+  /* table-layout: fixed; */
+  background: lightgray;
+  color: black;
+  width: 100%;
+}
+
+.expanded-table tr:nth-child(odd), .over-time tr:nth-child(odd) {
+  background: lightgray;
+  color: black;
+}
+
+.expanded-table tr:nth-child(even), .over-time tr:nth-child(even) {
+  background: #2d2d2d;
+  color: white;
+}
+
+.cryptos-info {
+  color: white;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.info-logo {
+  margin-top: 5%;
+  height: 10%;
+  width: 10%;
+}
+
+.table-ctr {
+  width: 100%;
+  overflow-x: auto;
+}

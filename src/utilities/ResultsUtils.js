@@ -17,13 +17,16 @@ const getRelevantResults = (cardWeight, keywords, results) => {
 
 const formatResults = (tagline, keywords, symbol) => {
   let injectResult = ''
+  let num;
   if (tagline.includes('[crypto2]')) {
+    num = 2
     injectResult = tagline.replace('[crypto1]', symbol[0].name)
     injectResult = injectResult.replace('[crypto2]', symbol[1].name)
     injectResult = injectResult.replace('[keyword1]', keywords[0].toUpperCase())
     injectResult = injectResult.replace('[keyword2]', keywords[1].toUpperCase())
   }
   else {
+    num = 1
     injectResult = tagline.replace('[crypto1]', symbol[0].name)
     injectResult = injectResult.replace('[keyword1]', keywords[0].toUpperCase())
   }
@@ -34,7 +37,7 @@ const formatResults = (tagline, keywords, symbol) => {
   injectResult = injectResult.replace('‘', '\'')
   injectResult = injectResult.replace('’', '\'')
 
-  return injectResult
+  return [injectResult, num]
 }
 
 export { getRelevantResults, formatResults }

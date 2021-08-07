@@ -11,6 +11,7 @@ const CryptoTable = ({data}) => {
         price={d.price}
         circSupply={d.circulating_supply}
         maxSupply={d.max_supply}
+        id={d.id}
       />
     )
   })
@@ -25,7 +26,7 @@ const CryptoTable = ({data}) => {
           <th>Price</th>
           <th>Circulating Supply</th>
           <th>Max Supply</th>
-          <th>Purchase Link</th>
+          <th>Learn More</th>
         </tr>
         {rows}
       </tbody>

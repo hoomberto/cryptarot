@@ -6,4 +6,9 @@ header {
   padding: 40px 0;
   object-fit: cover;
   background: #244c41;
+  color: white;
+}
+
+a:visited {
+  color: inherit;
 }
