@@ -6,12 +6,12 @@ const CardOfDay = () => {
   const [card, setCard] = useState('')
 
   useEffect(() => {
-    getDailyCard
+    getDailyCard()
     .then(data => setCard(data.card))
   }, [])
 
   return (
-    <>{!!card && <h3>{card.name}</h3>}  
+    <>{!!card && <h3>{card.name}</h3>}
     </>
   )
 
