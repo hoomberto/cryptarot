@@ -59,17 +59,17 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2% 10%;
+  padding: 0 10%;
 }
 
 .reading-container {
   font-family: 'Righteous', cursive;
-  width: 100vw;
   color: white;
   font-size: 22px;
   padding: 2% 0 15% 0;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .graphic-block {
@@ -94,6 +94,6 @@ img {
     display: grid;
     place-items: center;
     justify-content: center;
-
+    padding: 3% 2%;
   }
 }

@@ -44,12 +44,10 @@ const CardChoice = ({ data, isNew, setIsNew, newTarotCard}) => {
             </div>
           </div>
           {<section className="reading-container">
-            {!clicked ? <h3>Click the card to see your reading</h3> : null}
+            {!clicked ? <h3>Touch the card to see your reading</h3> : null}
 
             <CryptoHeader crypto={!!reading && isNew ? reading.crypto : data.crypto} clicked={clicked}/>
             <CardInfo card={!!reading && isNew ? reading.card : data.currentCard} clicked={clicked} />
-            {!clicked ? null : <button className="top-layer" onClick={newReading}>New Reading</button>}
-            <Link className="top-layer" to="/"><button onClick={newReading}>Go Back</button></Link>
             {!! clicked && <Btn icon={icons[6]} active={icons[7]} url="/pick/results" alt="View Results" />}
           </section>}
         </section>

@@ -24,11 +24,11 @@
 }
 
 .cod-name {
-
+  color: #F9CE77;
 }
 
 .cod-desc {
-  width: 50%;
+  width: 70%;
   text-align: justify;
   border: 4px solid white;
   padding: 20px;
