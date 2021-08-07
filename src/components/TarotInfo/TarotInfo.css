@@ -1,3 +1,27 @@
 .rev {
   transform: rotate(180deg);
 }
+
+.up-rev-cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.up, .rev {
+  transition: .2s ease all;
+}
+
+.up:hover {
+  transform: scale(1.1)
+}
+
+.rev:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+
+
+.t-info-section {
+  background: #f8b936;
+  font-family: 'Grenze', serif;
+}
