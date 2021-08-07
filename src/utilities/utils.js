@@ -11,6 +11,15 @@ const getRandomCard = (cards) => {
   return cards[getRandomIndex(cards)]
 }
 
+const shuffle = (array) => {
+  const toShuffle = array
+  for (let i = toShuffle.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [toShuffle[i], toShuffle[j]] = [toShuffle[j], toShuffle[i]];
+  }
+  return toShuffle
+}
+
 const getRandomCrypto = (data) => {
   let random1 = data[getRandomIndex(data)]
   let random2 = data[getRandomIndex(data)]
@@ -41,4 +50,4 @@ const getCheckLocal = () => {
 }
 
 
-export { getRandomElement, getRandomCard, getRandomCrypto, setAllLocal, getCheckLocal }
+export { getRandomElement, getRandomCard, getRandomCrypto, setAllLocal, getCheckLocal, shuffle }

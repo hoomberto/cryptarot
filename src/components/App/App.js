@@ -4,7 +4,7 @@ import CardChoice from '../CardChoice/CardChoice'
 import CryptosPage from '../CryptosPage/CryptosPage'
 import Landing from '../Landing/Landing'
 import CryptosInfo from '../CryptosInfo/CryptosInfo'
-
+import AllTarot from '../AllTarot/AllTarot'
 import Results from '../Results/Results'
 import { getData } from '../../utilities/apiCalls'
 import { getRelevantResults } from '../../utilities/ResultsUtils'
@@ -82,6 +82,14 @@ const App = () => {
           />
 
       }} />
+    <Route exact path="/tarot" render={() => {
+          return <AllTarot
+            images={images}
+            tarot={!tarotData ? false : tarotData.cards.map(card => card.name_short)}
+
+            />
+
+        }} />
       <Route exact path="/pick/results" render={() => {
           return (
             <>

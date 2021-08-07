@@ -1,0 +1,7 @@
+.all-tarot {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  grid-gap: 1.4em;
+  padding: 2% 3%;
+}
