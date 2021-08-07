@@ -20,15 +20,15 @@ const Results = ({result, crypto, card, image}) => {
         return (
           <div>
             <Link to={`/cryptos/${crypto[0].id}`}>
-              <h3>{crypto[0].name}</h3>
+              <button className="learn-more">Learn about {crypto[0].name}</button>
             </Link>
             <Link to={`/cryptos/${crypto[1].id}`}>
-              <h3>{crypto[1].name}</h3>
+              <button className="learn-more">Learn about {crypto[1].name}</button>
             </Link>
           </div>
         )
       }
-      return (<Link to={`/cryptos/${crypto[0].id}`}><h3>{crypto[0].name}</h3></Link>)
+      return (<Link to={`/cryptos/${crypto[0].id}`}><button className="learn-more">Learn about {crypto[0].name}</button></Link>)
     }
   }
 
@@ -38,7 +38,7 @@ const Results = ({result, crypto, card, image}) => {
         <>
         <section className="results-container">
           <div className="result-tagline">
-            {formatResults(choice, card.keywords, crypto)}
+            {formatResults(choice, card.keywords, crypto)[0]}
           <div>{renderCryptos()}</div>
         </div>
 
@@ -54,8 +54,8 @@ const Results = ({result, crypto, card, image}) => {
           </div>
         </section>
         <section className="results-btns">
-          <Link to="/pick"><button>New Reading</button></Link>
-          <Link to="/"><button>Go Home</button></Link>
+          <Link style={{textDecoration: 'none'}} to="/pick"><button>New Reading</button></Link>
+          <Link style={{textDecoration: 'none'}} to="/"><button>Go Home</button></Link>
         </section>
         </>
       }

@@ -5,7 +5,7 @@ import { graphics } from '../../utilities/images'
 const Header = () => {
   return (
     <header>
-      <Link style={{textDecoration: 'none'}} to="/"><h1>CrypTarot</h1></Link>
+      <Link style={{textDecoration: 'none'}} to="/"><h1>CRYPTAROT</h1></Link>
 
       <div>
         <Link style={{textDecoration: 'none'}} to="/cryptos">View Cryptocurrencies</Link>

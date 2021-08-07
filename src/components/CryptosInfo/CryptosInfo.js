@@ -1,4 +1,4 @@
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import './CryptosInfo.css'
 import PriceChange from '../PriceChange/PriceChange'
 const dayjs = require('dayjs')
@@ -67,6 +67,7 @@ const CryptosInfo = ({crypto}) => {
           </table>
         </div>
         <a target="_blank"href={`https://crypto.com/price/${formatName(crypto.name)}`}><button className="buy">Buy</button></a>
+        <Link to="/cryptos"><button>Back to Cryptos</button></Link>
       </section>
       }
     </>
