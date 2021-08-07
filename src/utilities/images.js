@@ -108,6 +108,20 @@ import moon from '../assets/graphics/moon.png'
 import rays from '../assets/graphics/rays.png'
 import border from '../assets/graphics/border.png'
 
+
+// Icons
+
+import deckIcon from '../assets/icons/deck.png';
+import deckActiveIcon from '../assets/icons/deck-active.png';
+import tarotIcon from '../assets/icons/tarot.png';
+import tarotActiveIcon from '../assets/icons/tarot-active.png'
+import shuffleIcon from '../assets/icons/shuffle.png'
+import shuffleActiveIcon from '../assets/icons/shuffle-active.png'
+import viewIcon from '../assets/icons/view.png'
+import viewActiveIcon from '../assets/icons/view-active.png'
+
+export const icons = [deckIcon, deckActiveIcon, tarotIcon, tarotActiveIcon, shuffleIcon, shuffleActiveIcon, viewIcon, viewActiveIcon]
+
 export const graphics = [bg, logo, sun, moon, bg2, rays, bg3, border]
 
 export const images = [
