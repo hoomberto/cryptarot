@@ -4,6 +4,7 @@ import {formatResults} from '../../utilities/ResultsUtils'
 import {Link} from 'react-router-dom'
 import Btn from '../Btn/Btn'
 import { icons } from '../../utilities/images'
+import PropTypes from 'prop-types'
 import './Results.css'
 // import { images } from '../../utilities/images'
 
@@ -65,5 +66,10 @@ const Results = ({result, crypto, card, image}) => {
   )
 }
 
-
 export default Results
+Results.propTypes = {
+  result: PropTypes.object.isRequired,
+  crypto: PropTypes.array.isRequired,
+  card: PropTypes.object.isRequired,
+  image: PropTypes.string.isRequired
+}
