@@ -3,6 +3,7 @@ import Loading from '../Loading/Loading'
 import { getDailyCard } from '../../utilities/apiCalls'
 import { images, icons } from '../../utilities/images'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './CardOfDay.css'
 
 const CardOfDay = ({ loading }) => {
@@ -38,3 +39,7 @@ const CardOfDay = ({ loading }) => {
 }
 
 export default CardOfDay
+
+CardOfDay.propTypes = {
+  loading: PropTypes.string.isRequired
+}
