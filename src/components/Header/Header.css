@@ -23,7 +23,7 @@ header {
 }
 
 .close {
-  width: 25px;
+  width: 15px;
   height: 25px;
   transform: translate(-8px, 10px);
 }
@@ -49,6 +49,7 @@ a {
   cursor: pointer;
 }
 
+
 .active-menu button {
   text-align: right;
 }
@@ -63,12 +64,32 @@ ul {
     display: none;
   }
   header h1 {
+    align-self: flex-start;
     font-size: 2.5em;
     margin-left: 12%;
   }
 
   .menu {
     display: block;
+    background: none;
+    border: none;
+    visibility: visible;
+  }
+
+  .active-menu {
+    display: flex;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+    flex-direction: column;
+    background: rgba(0,0,0,0.65);
+    width: 50%;
+    top: 0;
+    text-align: right;
+    border-radius: 8px;
+  }
+
+  .close-btn {
     background: none;
     border: none;
   }
@@ -91,18 +112,7 @@ ul {
     margin: 2% 5% 0 0;
   }
 
-  .active-menu {
-    display: flex;
-    position: absolute;
-    right: 0;
-    z-index: 2;
-    flex-direction: column;
-    background: rgba(0,0,0,0.65);
-    width: 50%;
-    top: 0;
-    text-align: right;
-    border-radius: 8px;
-  }
+
 
   .close-btn {
     background: none;
