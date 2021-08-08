@@ -14,7 +14,9 @@ CrypTarot will decipher the deeper meaning from within the cards and guide you t
 
 CrypTarot is an app meant to appeal to people whose interests are at the crossroads of modern tech (i.e. cryptocurrency) and occult topics (they use the Co-Stars app, enjoy astrology, tarot, witch things). It provides a novel, fun, and educational experience in learning about cryptocurrencies/current exchanges and Tarot card meanings.  
 
-Created with React during Mod 3 of the FE program at the Turing School of Software & Design. This final project revolved around creating a React-based application for a specific, niche audience, along with demonstrating a mastery of React, React Router, Asynchronous JS, and End to End testing with Cypress.  
+Created with React during Mod 3 of the FE program at the Turing School of Software & Design. This final project revolved around creating a React-based application for a specific, niche audience, along with demonstrating a mastery of React, React Router, Asynchronous JS, and End to End testing with Cypress. 
+
+![Mobile Design](./src/assets/images/readme/mobile1.png)
 
 ## Features
 
