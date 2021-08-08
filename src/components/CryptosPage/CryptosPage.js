@@ -4,6 +4,7 @@ import SearchBar from '../SearchBar/SearchBar'
 import CryptoTable from '../CryptoTable/CryptoTable'
 import Loading from '../Loading/Loading'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import './CryptosPage.css'
 
 const CryptosPage = ({ data, loading }) => {
@@ -32,7 +33,14 @@ const CryptosPage = ({ data, loading }) => {
       {!data ? <Loading image={loading} message="One moment - the spirits are crunching numbers..." /> : renderTable()}
     </>
   )
-
 }
 
 export default CryptosPage;
+
+CryptosPage.propTypes = {
+  data: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.array
+  ]).isRequired,
+  loading: PropTypes.string.isRequired
+}

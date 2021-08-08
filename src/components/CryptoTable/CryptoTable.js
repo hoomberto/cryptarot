@@ -1,4 +1,5 @@
 import TableRow from  '../TableRow/TableRow'
+import PropTypes from 'prop-types'
 import './CryptoTable.css'
 const CryptoTable = ({data}) => {
   const rows = data.map((d, index) => {
@@ -37,3 +38,7 @@ const CryptoTable = ({data}) => {
 }
 
 export default CryptoTable
+
+CryptoTable.propTypes = {
+  data: PropTypes.array.isRequired
+}

@@ -3,15 +3,13 @@ import './CryptosInfo.css'
 import PriceChange from '../PriceChange/PriceChange'
 import Btn from '../Btn/Btn'
 import { icons } from '../../utilities/images'
+import { formatName } from '../../utilities/utils'
+import PropTypes from 'prop-types'
 const dayjs = require('dayjs')
 const LocalizedFormat = require('dayjs/plugin/localizedFormat')
 dayjs.extend(LocalizedFormat)
 
 const CryptosInfo = ({crypto}) => {
-
-  const formatName = (name) => {
-    return (/\w/g.test(name)) ? name.toLowerCase().replaceAll(' ', '-') : name.toLowerCase()
-  }
 
   const getRows = () => {
     return ['1d', '7d', '30d', '365d', 'ytd'].map((param, index) => <PriceChange
@@ -83,3 +81,10 @@ const CryptosInfo = ({crypto}) => {
 }
 
 export default CryptosInfo
+
+CryptosInfo.propTypes = {
+  crypto: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.object
+  ]).isRequired,
+}

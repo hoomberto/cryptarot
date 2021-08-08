@@ -11,6 +11,10 @@ const getRandomCard = (cards) => {
   return cards[getRandomIndex(cards)]
 }
 
+const formatName = (name) => {
+  return (/\w/g.test(name)) ? name.toLowerCase().replaceAll(' ', '-') : name.toLowerCase()
+}
+
 const shuffle = (array) => {
   const toShuffle = array
   for (let i = toShuffle.length - 1; i > 0; i--) {
@@ -50,4 +54,4 @@ const getCheckLocal = () => {
 }
 
 
-export { getRandomElement, getRandomCard, getRandomCrypto, setAllLocal, getCheckLocal, shuffle }
+export { getRandomElement, getRandomCard, getRandomCrypto, setAllLocal, getCheckLocal, shuffle, formatName }
