@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import CardOfDay from '../CardOfDay/CardOfDay'
 import Btn from '../Btn/Btn'
 import './Landing.css'

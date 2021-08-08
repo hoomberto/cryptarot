@@ -1,4 +1,4 @@
-import { Redirect, Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import './CryptosInfo.css'
 import PriceChange from '../PriceChange/PriceChange'
 import Btn from '../Btn/Btn'
@@ -14,7 +14,6 @@ const CryptosInfo = ({crypto}) => {
   }
 
   const getRows = () => {
-    let rows;
     return ['1d', '7d', '30d', '365d', 'ytd'].map((param, index) => <PriceChange
       key={index}
       time={param}
@@ -32,7 +31,7 @@ const CryptosInfo = ({crypto}) => {
     <>
       {!crypto ? <Redirect to="/" /> :
       <section className="cryptos-info">
-        <img className="info-logo" src={crypto.logo_url} />
+        <img className="info-logo" src={crypto.logo_url} alt="logo"/>
         <h1>{crypto.name}</h1>
         <div className="table-ctr">
           <table className="expanded-table">
@@ -51,7 +50,7 @@ const CryptosInfo = ({crypto}) => {
               <td>${parseFloat(crypto.price).toFixed(2)}</td>
               <td>{dayjs(crypto.first_trade).format("LLL")}</td>
               <td>{parseInt(crypto.circulating_supply).toLocaleString()}</td>
-              <td>{crypto.max_supply && parseInt(crypto.max_supply).toLocaleString() || "N/A"}</td>
+              <td>{crypto.max_supply ? parseInt(crypto.max_supply).toLocaleString() : "N/A"}</td>
               </tr>
             </tbody>
           </table>
@@ -74,7 +73,7 @@ const CryptosInfo = ({crypto}) => {
           </table>
         </div>
         <div className="cryptos-info-btns-ctr">
-        <a target="_blank"href={`https://crypto.com/price/${formatName(crypto.name)}`}><button className="buy">Purchase {crypto.name}</button></a>
+        <a target="_blank" rel="noreferrer" href={`https://crypto.com/price/${formatName(crypto.name)}`}><button className="buy">Purchase {crypto.name}</button></a>
         <Btn icon={icons[8]} active={icons[9]} url="/cryptos" alt="View All Cryptos" />
         </div>
       </section>

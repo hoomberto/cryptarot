@@ -1,8 +1,6 @@
 // import {  } from '../../utilities/CryptosPageUtils'
-import React, {useState, useEffect } from 'react'
-import UseViewport from '../Resize/Resize'
+import React, {useState} from 'react'
 import SearchBar from '../SearchBar/SearchBar'
-import CryptoCard from '../CryptoCard/CryptoCard'
 import CryptoTable from '../CryptoTable/CryptoTable'
 import { Link } from 'react-router-dom'
 import './CryptosPage.css'
@@ -24,21 +22,6 @@ const CryptosPage = ({ data }) => {
         <div className="table-container">
           {!query ? <CryptoTable data={data} /> : <CryptoTable data={queryResults(data)} />}
         </div>
-      </>
-    )
-  }
-
-  const renderMobile = () => {
-    return (
-      <>
-      {data.map((d, index) => {
-        return <CryptoCard
-        key={index}
-          name={d.name}
-          d1={d['1d']}
-          price={d.price}
-        />
-      })}
       </>
     )
   }

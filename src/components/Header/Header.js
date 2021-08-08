@@ -1,7 +1,7 @@
 import './Header.css'
 import { useState } from 'react'
-import { NavLink, Link } from 'react-router-dom'
-import { graphics, icons } from '../../utilities/images'
+import { Link } from 'react-router-dom'
+import { icons } from '../../utilities/images'
 
 const Header = () => {
 

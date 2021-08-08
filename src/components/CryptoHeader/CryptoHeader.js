@@ -20,7 +20,7 @@ const oneCrypto = () => {
           <h3>Current Price</h3>
           <p>${parseFloat(crypto[0].price).toFixed(2)}</p>
           <h3>Current Circ. Supply</h3>
-          <p>{new Number(crypto[0].circulating_supply).toLocaleString()}</p>
+          <p>{Number(crypto[0].circulating_supply).toLocaleString()}</p>
         </div>
       )}
     </div>

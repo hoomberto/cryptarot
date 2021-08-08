@@ -99,15 +99,8 @@ import di14 from '../assets/images/di14.jpg';
 
 // Graphics
 
-import bg from '../assets/graphics/bg.jpg';
-import bg2 from '../assets/graphics/bg2.jpg';
-import bg3 from '../assets/graphics/bg3.jpg';
-import logo from '../assets/graphics/logo.png'
 import sun from '../assets/graphics/sun.png'
 import moon from '../assets/graphics/moon.png'
-import rays from '../assets/graphics/rays.png'
-import border from '../assets/graphics/border.png'
-// import loading from '../assets/graphics/loading.png'
 
 // Icons
 
@@ -145,7 +138,7 @@ export const icons = [
   homeActive
 ]
 
-export const graphics = [bg, logo, sun, moon, bg2, rays, bg3, border]
+export const graphics = [sun, moon]
 
 export const images = [
     reverse,

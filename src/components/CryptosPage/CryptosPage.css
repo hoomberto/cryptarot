@@ -3,11 +3,6 @@
   height: 80vh;
 }
 
-/* table > tbody > tr > td > button {
-  background: none,
-} */
-
-
 .button-search-bar-ctr {
   display: flex;
   padding: 20px 0;
@@ -17,7 +12,6 @@
 }
 table > tbody > tr > td > a > button,
 .button-search-bar-ctr button {
-  /* margin-right: 50px; */
   width: 160px;
   color: white;
   background: none;

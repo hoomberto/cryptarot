@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import { Link } from "react-router-dom"
 import SingleTarot from '../SingleTarot/SingleTarot'
 import { shuffle } from '../../utilities/utils'
-import CardContext from '../Context/CardContext'
 import Loading from '../Loading/Loading'
 import ShuffleBtn from '../ShuffleBtn/ShuffleBtn'
 import './AllTarot.css'

@@ -9,7 +9,7 @@ import Results from '../Results/Results'
 import TarotInfo from '../TarotInfo/TarotInfo'
 import { getData } from '../../utilities/apiCalls'
 import { getRelevantResults } from '../../utilities/ResultsUtils'
-import { images, icons, graphics } from '../../utilities/images'
+import { images, icons } from '../../utilities/images'
 
 // import CardContext from '../../Context/CardContext';
 import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal, getRandomElement } from '../../utilities/utils'

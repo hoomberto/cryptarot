@@ -11,15 +11,16 @@ const CardOfDay = ({ loading }) => {
 
 
   useEffect(() => {
-    let isMounted = true;
     const fetchData = async () => {
-      const response = await getDailyCard()
-      setCard(response.card)
+      try {
+        const response = await getDailyCard()
+        setCard(response.card)
+      }
+      catch (err) {
+        setErrMsg(err)
+      }
     }
     fetchData()
-    return () => {
-      isMounted = false;
-    }
   }, [])
 
   return (

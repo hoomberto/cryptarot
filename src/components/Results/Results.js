@@ -12,7 +12,7 @@ const Results = ({result, crypto, card, image}) => {
 
   useEffect(() => {
     if (result) setChoice(getRandomElement(result.result_choices))
-  }, [])
+  }, [result])
 
   const renderCryptos = () => {
     let formatted;
@@ -22,15 +22,15 @@ const Results = ({result, crypto, card, image}) => {
         return (
           <div className="cryptos-btns">
             <Link to={`/cryptos/${crypto[0].id}`}>
-              <button className="learn-more">Learn about {crypto[0].name} <span><img src={crypto[0].logo} alt="logo"/></span></button>
+              <button className="learn-more">Learn about {crypto[0].name} <span><img src={crypto[0].logo} alt={`${crypto[0].name} logo`}/></span></button>
             </Link>
             <Link to={`/cryptos/${crypto[1].id}`}>
-              <button className="learn-more">Learn about {crypto[1].name} <span><img src={crypto[1].logo} alt="logo"/></span></button>
+              <button className="learn-more">Learn about {crypto[1].name} <span><img src={crypto[1].logo} alt={`${crypto[1].name} logo`}/></span></button>
             </Link>
           </div>
         )
       }
-      return (<Link to={`/cryptos/${crypto[0].id}`}><button className="learn-more">Learn about {crypto[0].name} <span><img src={crypto[0].logo} alt="logo"/></span></button></Link>)
+      return (<Link to={`/cryptos/${crypto[0].id}`}><button className="learn-more">Learn about {crypto[0].name} <span><img src={crypto[0].logo} alt={`${crypto[0].name} logo`}/></span></button></Link>)
     }
   }
 

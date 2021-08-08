@@ -24,7 +24,8 @@ tr td {
 }
 
 tr:nth-of-type(odd) {
-  background: #F9CE77;
+  background: rgba(51,22,92,1);
+  color: white;
   border-top: 1px solid gray;
 }
 

@@ -1,5 +1,4 @@
 import React , {useState, useEffect} from 'react'
-import { Link, Redirect, Route } from 'react-router-dom'
 import Card from '../Card/Card'
 import CardInfo from '../CardInfo/CardInfo'
 import CryptoHeader from '../CryptoHeader/CryptoHeader'
@@ -12,11 +11,8 @@ import { graphics, icons } from '../../utilities/images'
 const CardChoice = ({ data, isNew, setIsNew, newTarotCard}) => {
 
   const [clicked, setClicked] = useState(false)
-
-  useEffect(() => {
-    if (data) newReading()
-  }, [])
   const [reading, setReading] = useState('')
+
   const newReading = () => {
     let newCard = {
       card: getRandomCard(data.cards),
@@ -28,6 +24,9 @@ const CardChoice = ({ data, isNew, setIsNew, newTarotCard}) => {
     setIsNew(true)
   }
 
+  useEffect(() => {
+    if (data) newReading()
+  }, [])
 
 
   return  (
@@ -36,11 +35,11 @@ const CardChoice = ({ data, isNew, setIsNew, newTarotCard}) => {
         <section className="active-card-bg">
           <div className="card-container">
             <div className="graphic-block">
-              <img className="sun-graphic" src={`${graphics[2]}`} />
+              <img className="sun-graphic" src={`${graphics[0]}`} alt="sol" />
             </div>
             <Card name={!!reading && isNew ? reading.card.name_short : data.currentCard.name_short } clicked={clicked} setClicked={setClicked}/>
             <div className="graphic-block">
-              <img className="moon-graphic" src={`${graphics[3]}`} />
+              <img className="moon-graphic" src={`${graphics[1]}`} alt="luna" />
             </div>
           </div>
           {<section className="reading-container">

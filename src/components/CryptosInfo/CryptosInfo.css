@@ -6,8 +6,8 @@
 }
 
 .expanded-table tr:nth-child(odd), .over-time tr:nth-child(odd) {
-  background: #F9CE77;
-  color: rgba(51,22,92,1);
+  background: rgba(51,22,92,1);
+  color: white;
 }
 
 .expanded-table tr:nth-child(even), .over-time tr:nth-child(even) {
