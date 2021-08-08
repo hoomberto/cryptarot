@@ -1,5 +1,6 @@
-# CrypTarot - Niche Audience
+# CrypTarot
 
+## [View this deployed app in action](https://cryptarot.herokuapp.com/)
 ## [View the Repo for the API created for this project](https://github.com/hoomberto/cryptarot-api)
 
 ## Overview
