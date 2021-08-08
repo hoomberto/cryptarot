@@ -10,6 +10,15 @@
   text-align: center;
 }
 
+.all-tarot-ctr > h3 {
+  font-family: 'Righteous', cursive;
+  width: 50%;
+  text-align: center;
+  margin: 1% auto;
+  padding-top: 10px;
+  color: white;
+}
+
 @media screen and (max-width: 1900px) {
   .all-tarot {
     grid-template-columns: repeat(6, 1fr);
@@ -27,5 +36,10 @@
   .all-tarot {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(39, 1fr);
+  }
+
+  .all-tarot-ctr > h3 {
+    width: auto;
+    padding: 10px;
   }
 }

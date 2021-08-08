@@ -21,6 +21,7 @@ const AllTarot = ({ images, tarot, icons, loadingImage }) => {
 
   return (
     <div className="all-tarot-ctr">
+    <h3>This app utilizes cards and information from the Book of Thoth tarot deck. Flip each card to reveal them and tap them again to learn more!</h3>
     <ShuffleBtn icon={icons[0]} active={icons[1]} shuffle={shuffleCards} alt="Shuffle Cards" />
     <section className="all-tarot">
       {!tarot ? <Loading image={loadingImage} message="Spreading the cards - one moment please..." /> : tarot.map(card => {
