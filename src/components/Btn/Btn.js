@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 // import { icons } from '../../utilities/images'
 import './Btn.css'
 
@@ -24,3 +25,10 @@ const Btn = ({ icon, active, url, alt }) => {
 }
 
 export default Btn
+
+Btn.propTypes = {
+  icon: PropTypes.string.isRequired,
+  active: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
+}

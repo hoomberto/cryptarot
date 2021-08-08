@@ -3,6 +3,7 @@ import SingleTarot from '../SingleTarot/SingleTarot'
 import { shuffle } from '../../utilities/utils'
 import Loading from '../Loading/Loading'
 import ShuffleBtn from '../ShuffleBtn/ShuffleBtn'
+import PropTypes from 'prop-types';
 import './AllTarot.css'
 
 const AllTarot = ({ images, tarot, icons, loadingImage }) => {
@@ -33,3 +34,20 @@ const AllTarot = ({ images, tarot, icons, loadingImage }) => {
 }
 
 export default AllTarot
+
+// optionalUnion: PropTypes.oneOfType([
+//   PropTypes.string,
+//   PropTypes.number,
+//   PropTypes.instanceOf(Message)
+// ]),
+
+
+AllTarot.propTypes = {
+  images: PropTypes.array.isRequired,
+  tarot: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.array
+  ]).isRequired,
+  icons: PropTypes.array.isRequired,
+  loadingImage: PropTypes.string.isRequired,
+};
