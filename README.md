@@ -60,7 +60,7 @@ Run `npm start`
 - [ ] Incorporate classic 15-card spread *(Golden Dawn Method)* suggested for use with this particular Tarot Deck *(Book of Thoth)*
 - [ ] Allow for multiple card spread that will be able to give more detailed reading 
 - [ ] Incorporate multiple spreads to have different card arrangements for different types of readings
-- [ ] Save readings to a “saved-readings” page which utilizes POST functionality that all Users will be able to utilize
+- [ ] Feature to let user save their unique readings to a “saved-readings” page
 
 ## Contributors
 <table>
