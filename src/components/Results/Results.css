@@ -23,6 +23,9 @@
   height: 80vh;
 }
 
+.tagline {
+  margin: 1% 0;
+}
 
 span > img {
   width: 15px;
@@ -132,7 +135,7 @@ span > img {
   }
 
   .results-btns button {
-    padding: 10px;
+    padding: 3px;
     margin: 5% 0;
     /* width: 30vw; */
   }

@@ -46,6 +46,7 @@ img {
   margin-top: 2%;
   max-width: 15%;
   height: auto;
+  border-radius: 8px;
 }
 
 .back {
@@ -65,7 +66,7 @@ img {
 @media screen and (max-width: 800px) {
   .back, .front {
     margin-top: 0;
-    max-width: 50%;
+    max-width: 65%;
     border-radius: 8px;
   }
 }
