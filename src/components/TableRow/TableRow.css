@@ -14,11 +14,22 @@
   cursor: pointer;
 }
 
+.more-info {
+  cursor: pointer;
+  width: 120px;
+}
+
 tr td {
   text-align: center;
 }
 
 tr:nth-of-type(odd) {
-  background: lightgray;
+  background: rgba(51,22,92,1);
+  color: white;
   border-top: 1px solid gray;
+}
+
+tr:nth-of-type(even) {
+  color: white;
+  /* border-top: 1px solid gray; */
 }

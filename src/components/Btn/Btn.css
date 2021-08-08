@@ -1,0 +1,35 @@
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+}
+
+.view-results {
+  padding: 2px 84px;
+  cursor: pointer;
+  background: none;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  transition: .2s ease all;
+}
+
+.view-results:hover {
+  color: rgba(51,22,92,1);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+button div p {
+  margin: 2% 0;
+}
+
+@media screen and (max-width: 600px) {
+  .view-results {
+    padding: 5px 20px;
+  }
+
+  .icon {
+    height: 25px;
+    width: 25px;
+  }
+}

@@ -2,15 +2,27 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 5% 0;
-  background: #f8b936;
-  font-family: 'Grenze', serif;
+  padding: 2.5% 0;
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  color: white;
 }
 
 .result-tagline {
-  width: 20%;
-  font-size: 22px;
+  width: 40%;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: rgba(0,0,0, 0.65);
+  padding: 10px;
+  border-radius: 8px;
 }
+
+.results-img-ctr {
+  height: 80vh;
+}
+
 
 .results-img-container {
   padding: 10px 20px;
@@ -24,6 +36,11 @@
 
 } */
 
+span > img {
+  width: 15px;
+  height: 15px;
+}
+
 .results-img {
   height: 10%;
   width: 100%;
@@ -31,17 +48,91 @@
 }
 
 .results-btns {
-  padding: 40px 0;
+  padding: 20px 0;
   width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
+.learn-more,
 .results-btns button {
   padding: 20px;
   width: 200px;
+  background: none;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: .2s ease all;
+}
+
+.learn-more:hover,
+.results-btns button:hover {
+  color: rgba(51,22,92,1);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .learn-more {
   cursor: pointer;
-  padding: 20px;
-  width: 200px;
+  /* padding: 20px; */
+  /* width: 200px; */
+  height: 100%;
+}
+
+.cryptos-btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .cryptos-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}
+
+@media screen and (max-width: 800px) {
+  .results-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .results-img-ctr {
+    height: 100vh;
+  }
+
+  .results-img {
+    width: 60%;
+  }
+
+
+
+  .result-tagline {
+    /* margin-top: 10px; */
+    width: auto;
+    border-radius: 0 0 18px 18px;
+  }
+
+  .result-tagline p {
+    font-size: .7em;
+  }
+
+  .results-img-container {
+    border: none;
+  }
+
+  .results-btns {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .results-btns button {
+    padding: 10px;
+    margin: 5% 0;
+    /* width: 30vw; */
+  }
 }

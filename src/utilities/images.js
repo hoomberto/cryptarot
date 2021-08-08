@@ -99,16 +99,46 @@ import di14 from '../assets/images/di14.jpg';
 
 // Graphics
 
-import bg from '../assets/graphics/bg.jpg';
-import bg2 from '../assets/graphics/bg2.jpg';
-import bg3 from '../assets/graphics/bg3.jpg';
-import logo from '../assets/graphics/logo.png'
 import sun from '../assets/graphics/sun.png'
 import moon from '../assets/graphics/moon.png'
-import rays from '../assets/graphics/rays.png'
-import border from '../assets/graphics/border.png'
 
-export const graphics = [bg, logo, sun, moon, bg2, rays, bg3, border]
+// Icons
+
+import deckIcon from '../assets/icons/deck.png';
+import deckActiveIcon from '../assets/icons/deck-active.png';
+import tarotIcon from '../assets/icons/tarot.png';
+import tarotActiveIcon from '../assets/icons/tarot-active.png'
+import shuffleIcon from '../assets/icons/shuffle.png'
+import shuffleActiveIcon from '../assets/icons/shuffle-active.png'
+import viewIcon from '../assets/icons/view.png'
+import viewActiveIcon from '../assets/icons/view-active.png'
+import crypto from '../assets/icons/crypto.png'
+import cryptoActive from '../assets/icons/crypto-active.png'
+import loading from '../assets/icons/loading.png'
+import menu from '../assets/icons/menu.png'
+import close from '../assets/icons/close.png'
+import home from '../assets/icons/home.png'
+import homeActive from '../assets/icons/home-active.png'
+
+export const icons = [
+  deckIcon,
+  deckActiveIcon,
+  tarotIcon,
+  tarotActiveIcon,
+  shuffleIcon,
+  shuffleActiveIcon,
+  viewIcon,
+  viewActiveIcon,
+  crypto,
+  cryptoActive,
+  loading,
+  menu,
+  close,
+  home,
+  homeActive
+]
+
+export const graphics = [sun, moon]
 
 export const images = [
     reverse,

@@ -1,9 +1,10 @@
 import TableRow from  '../TableRow/TableRow'
 import './CryptoTable.css'
 const CryptoTable = ({data}) => {
-  const rows = data.map(d => {
+  const rows = data.map((d, index) => {
     return (
       <TableRow
+        key={index}
         rank={d.rank}
         logo={d.logo_url}
         name={d.name}

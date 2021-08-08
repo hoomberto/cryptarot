@@ -1,6 +1,12 @@
 .card-info {
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.75);
   border-radius: 8px;
   padding: 20px;
   margin: 20px 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .card-info {
+    font-size: 0.8em;
+  }
 }
