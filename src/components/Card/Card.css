@@ -43,7 +43,8 @@ img {
 }
 
 .back, .front {
-  max-width: 40%;
+  margin-top: 2%;
+  max-width: 15%;
   height: auto;
 }
 
@@ -55,7 +56,22 @@ img {
   transform: rotateY( 180deg ) scale(1.1);
 }
 
+@media screen and (max-width: 1300px) {
+  .back, .front {
+    max-width: 30%;
+  }
+}
+
 @media screen and (max-width: 800px) {
+  .back, .front {
+    margin-top: 0;
+    max-width: 50%;
+    border-radius: 8px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
   .back, .front {
     max-width: 70%;
   }

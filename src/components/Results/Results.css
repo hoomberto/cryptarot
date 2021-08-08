@@ -31,8 +31,22 @@ span > img {
 
 .results-img {
   height: 10%;
-  width: 100%;
+  max-width: 70%;
   border-radius: 4%;
+  transition: .2s ease all;
+}
+
+.results-img:hover {
+  box-shadow:
+  inset 0 0 50px #fff,
+  inset 20px 0 80px #f0f,
+  inset -20px 0 80px #0ff,
+  inset 20px 0 300px #f0f,
+  inset -20px 0 300px #0ff,
+  0 0 50px #fff,
+  -10px 0 80px #f0f,
+  10px 0 80px #0ff;
+  transform: scale(1.1);
 }
 
 .results-btns {
@@ -61,8 +75,6 @@ span > img {
 
 .learn-more {
   cursor: pointer;
-  /* padding: 20px; */
-  /* width: 200px; */
   height: 100%;
 }
 

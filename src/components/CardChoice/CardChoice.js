@@ -3,12 +3,13 @@ import Card from '../Card/Card'
 import CardInfo from '../CardInfo/CardInfo'
 import CryptoHeader from '../CryptoHeader/CryptoHeader'
 import Btn from '../Btn/Btn'
+import Loading from '../Loading/Loading'
 import { getRandomCard, getRandomCrypto } from '../../utilities/utils'
 import './CardChoice.css'
 import { graphics, icons } from '../../utilities/images'
 
 
-const CardChoice = ({ data, isNew, setIsNew, newTarotCard}) => {
+const CardChoice = ({ data, isNew, setIsNew, newTarotCard, loading}) => {
 
   const [clicked, setClicked] = useState(false)
   const [reading, setReading] = useState('')
@@ -31,7 +32,7 @@ const CardChoice = ({ data, isNew, setIsNew, newTarotCard}) => {
 
   return  (
     <>
-      {!data ? <h2>One moment - the spirits are gathering...</h2> :
+      {!data ? <Loading image={loading} message="One moment - the spirits are gathering..." /> :
         <section className="active-card-bg">
           <div className="card-container">
             <div className="graphic-block">
@@ -46,8 +47,10 @@ const CardChoice = ({ data, isNew, setIsNew, newTarotCard}) => {
             {!clicked ? <h3>Touch the card to see your reading</h3> : null}
 
             <CryptoHeader crypto={!!reading && isNew ? reading.crypto : data.crypto} clicked={clicked}/>
-            <CardInfo card={!!reading && isNew ? reading.card : data.currentCard} clicked={clicked} />
-            {!! clicked && <Btn icon={icons[6]} active={icons[7]} url="/pick/results" alt="View Results" />}
+            <div className="info-button-ctr">
+              <CardInfo card={!!reading && isNew ? reading.card : data.currentCard} clicked={clicked} />
+              {!! clicked && <Btn icon={icons[6]} active={icons[7]} url="/pick/results" alt="View Results" />}
+            </div>
           </section>}
         </section>
       }

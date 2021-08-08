@@ -2,7 +2,7 @@
   background: rgba(0, 0, 0, 0.75);
   border-radius: 8px;
   padding: 20px;
-  margin: 20px 50px;
+  margin: 24px 86px;
   font-size: 1em;
 }
 
@@ -12,6 +12,9 @@
 
 @media screen and (max-width: 600px) {
   .card-info {
-    font-size: 0.8em;
+    font-size: 65%;
+    padding: 20px 0;
+    width: 100%;
+    margin: 4% 0;
   }
 }

@@ -80,6 +80,7 @@ const App = () => {
           isNew={isNew}
           setIsNew={setIsNew}
           newTarotCard={newTarotCard}
+          loading={icons[10]}
           />
 
       }} />
@@ -126,7 +127,7 @@ const App = () => {
       }
         />
       <Route exact path="/cryptos" render={() => {
-        return <CryptosPage data={tarotData.cryptoData || false} />
+        return <CryptosPage loading={icons[10]} data={tarotData.cryptoData || false} />
       }} />
     <Route exact path="/cryptos/:id" render={({match}) => {
         const { id } = match.params
