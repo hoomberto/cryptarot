@@ -3,10 +3,6 @@ header {
   justify-content: space-around;
   text-align: center;
   align-items: center;
-  /* padding: 40px 0; */
-  object-fit: cover;
-  /* background: rgb(196,170,245);
-  background: linear-gradient(56deg, #fc4a1a 0%, #f7b733 100%); */
   background: rgba(51,22,92,1);
   color: #F9CE77;
   font-family: 'Righteous', cursive;
@@ -19,10 +15,11 @@ header {
 }
 
 .menu-icon {
-  width: 45px;
-  height: 45px;
+  height: 10%;
   border-radius: 0;
   margin-left: -65%;
+  max-width: 34%;
+  margin-left: 31%;
 }
 
 .close {
@@ -56,9 +53,9 @@ a {
   text-align: right;
 }
 
-
 ul {
   list-style-type: none;
+  text-align: right;
 }
 
 @media screen and (max-width: 600px) {
@@ -96,18 +93,18 @@ ul {
     right: 0;
     z-index: 2;
     flex-direction: column;
-    background: white;
+    background: rgba(0,0,0,0.65);
     width: 50%;
     top: 0;
     text-align: right;
     border-radius: 8px;
-    /* background: none; */
   }
 
   .close-btn {
     background: none;
     border: none;
+    cursor: pointer;
+    transition: .2s ease all;
   }
-
 
 }
