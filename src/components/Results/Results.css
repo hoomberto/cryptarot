@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 2.5% 0;
+  padding-top: 10px;
   font-family: 'Righteous', cursive;
   text-align: center;
   color: white;
@@ -24,11 +24,6 @@
 }
 
 
-.results-img-container {
-  padding: 10px 20px;
-  border: 4px solid white;
-  border-radius: 3%;
-}
 
 /* .outer-img-container {
   padding: 40px 40px;
@@ -128,6 +123,7 @@ span > img {
     padding: 0;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2%;
   }
 
   .results-btns button {

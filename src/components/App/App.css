@@ -1,22 +1,8 @@
-/* section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-img {
-  height: 400px;
-  width: 267px;
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Grenze:wght@500&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Grenze:wght@500&family=Roboto&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 body {
-  /* height: 100%; */
   background: rgba(51,22,92,1);
 }
 

@@ -43,7 +43,7 @@ img {
 }
 
 .back, .front {
-  max-width: 100%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -53,4 +53,10 @@ img {
 
 .back:active {
   transform: rotateY( 180deg ) scale(1.1);
+}
+
+@media screen and (max-width: 800px) {
+  .back, .front {
+    max-width: 80%;
+  }
 }
