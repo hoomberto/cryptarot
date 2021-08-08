@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# CrypTarot - Niche Audience
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [View the Repo for the API created for this project](https://github.com/hoomberto/cryptarot-api)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+“Investing meets the Occult!”
+Consult the spirits and have Tarot cards from the Book of Thoth cast judgment on your financial prospects - should you HODL on DOGE, go all in on BTC, or stay far away from THETA? 
 
-### `yarn start`
+CrypTarot will decipher the deeper meaning from within the cards and guide you to sound financial futures. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Disclaimer
+*(CrypTarot is not responsible for any resulting gains or losses accrued by the user and is not meant to be used for serious financial decisions or advice)*
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+CrypTarot is an app meant to appeal to people whose interests are at the crossroads of modern tech (i.e. cryptocurrency) and occult topics (they use the Co-Stars app, enjoy astrology, tarot, witch things). It provides a novel, fun, and educational experience in learning about cryptocurrencies/current exchanges and Tarot card meanings.  
 
-### `yarn test`
+Created with React during Mod 3 of the FE program at the Turing School of Software & Design. This final project revolved around creating a React-based application for a specific, niche audience, along with demonstrating a mastery of React, React Router, Asynchronous JS, and End to End testing with Cypress.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `yarn build`
+- UI that accesses data from [CrypTarot API](https://github.com/hoomberto/cryptarot-api) and [Nomics API](https://nomics.com/docs/) to allow for Tarot readings involving various cryptocurrencies
+- On visiting, the site displays the card of the day (which is updated automatically by API at ~4:10PM MST daily) and presented with options to Get a Reading, View Cryptos, and View Tarot
+- Tarot Reading: User is able to have a card chosen at random, flip the card, then view the results of their reading. 
+- Reading Results: Depending on the card, User will be provided with either one or two cryptocurrencies to invest in, stay away from, consider, and other options. 
+- Cryptocurrency data: Following reading, User is able to go to a page that contains further information about the cryptocurrency relevant to their reading, including price and volume changes over time, date of first trade, and a link to purchase the cryptocurrency. 
+- Currencies Section - User is able to view recent data on exchanges and search currencies by name or symbol. Each entry has a link that leads to that currency's unique link in the app.
+- Tarot Section - User can view all 78 cards present in the Book of Thoth, can click to reveal them one by one, and visit that card's unique page after revealing it. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Set Up
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone this repo down, and `cd` into it.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Run `npm install`
 
-### `yarn eject`
+Run `npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Tools & Technologies
+<p align="left">
+  <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="javascript" />
+  <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="html5"/>
+  <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Github" />
+  <img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/-React%20Router-CA4245?logo=react-router" alt="React Router" />
+  <p>Heroku API</p>
+  <p>Cypress</p>
+  
+</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future Additions
+- [ ] Incorporate reverse cards to allow for reveres meanings and even more results
+- [ ] Incorporate classic 15-card spread *(Golden Dawn Method)* suggested for use with this particular Tarot Deck *(Book of Thoth)*
+- [ ] Allow for multiple card spread that will be able to give more detailed reading 
+- [ ] Incorporate spreads to have multiple card arrangements to have readings done 
+- [ ] Save readings to a “saved-readings” page which utilizes POST functionality that all Users will be able to utilize
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contributors
+<table>
+     <tr>
+        <td> Bobby Vasquez <a href="https://github.com/hoomberto">GH</td>
+    </tr>
+    </tr>
+    <td><img src="https://avatars.githubusercontent.com/u/78388491?v=4" alt="Bobby GH img"
+ width="150" height="auto" /></td>
+</table>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
