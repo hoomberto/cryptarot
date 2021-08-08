@@ -9,10 +9,10 @@
 .crypto-header-container {
   display: flex;
   justify-content: center;
-  font-size: 22px;
+  font-size: 82%;
   transform: translateX(-22px);
   cursor: default;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Righteous', cursive;
 }
 
 .crypto-header-container h2 {
