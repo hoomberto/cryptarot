@@ -22,6 +22,19 @@
   transform: rotate(180deg) scale(1.1);
 }
 
+.go-back {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  transition: .2s ease all;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.go-back:hover {
+  background: white;
+  color: rgba(51,22,92,1);
+}
 
 .t-info-section {
   /* background: #f8b936; */

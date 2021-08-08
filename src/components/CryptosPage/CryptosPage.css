@@ -26,3 +26,10 @@ table > tbody > tr > td > a > button:hover,
   color: rgba(51,22,92,1);
   background: rgba(255, 255, 255, 0.85);
 }
+
+@media screen and (max-width: 600px) {
+  table > tbody > tr > td > a > button,
+  .button-search-bar-ctr button {
+    width: 100%;
+  }
+}

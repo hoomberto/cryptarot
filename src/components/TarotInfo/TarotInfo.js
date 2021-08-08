@@ -1,5 +1,8 @@
 import './TarotInfo.css'
+import { useHistory } from "react-router-dom";
+
 const TarotInfo = ({card, url}) => {
+  let history = useHistory();
   return (
     <>
       <section className="t-info-section">
@@ -19,6 +22,7 @@ const TarotInfo = ({card, url}) => {
         <h4>{card.keywords[2]}, {card.keywords[3]}</h4>
       </div>
       </div>
+      <button className="go-back" onClick={() => history.goBack()}>Go Back</button>
       </section>
     </>
   )
