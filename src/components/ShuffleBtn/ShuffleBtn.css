@@ -4,7 +4,8 @@
   border-radius: 0;
 }
 
-.view-results {
+
+.shuffle-btn {
   padding: 2px 84px;
   cursor: pointer;
   background: none;
@@ -12,9 +13,10 @@
   border-radius: 4px;
   color: white;
   transition: .2s ease all;
+  margin: 3% 0;
 }
 
-.view-results:hover {
+.shuffle-btn:hover {
   color: rgba(51,22,92,1);
   background: rgba(255, 255, 255, 0.85);
 }
@@ -24,7 +26,7 @@ button div p {
 }
 
 @media screen and (max-width: 600px) {
-  .view-results {
+  .shuffle-btn {
     padding: 5px 20px;
   }
 

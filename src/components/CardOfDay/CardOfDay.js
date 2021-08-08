@@ -23,11 +23,12 @@ const CardOfDay = ({ loading }) => {
   }, [])
 
   return (
-    <div className="cod-ctr"><h2>Card of the Day</h2>
+    <div className="cod-ctr"><h2 className="cod-title">Card of the Day</h2>
     {!card ? <Loading image={icons[10]} message="Summoning card of the day..." /> : <div className="card-of-day-ctr">
     <img className="cod" src={images.find(image => image.includes(card.name_short))} alt={card.name} />
         <p className="cod-name">{card.name}</p>
         <p className="cod-desc">{card.description}</p>
+        <p>Check again tomorrow for a new reading!</p>
       </div>}
     </div>
   )

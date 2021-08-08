@@ -22,6 +22,29 @@
   text-align: center;
 }
 
+.cryptos-info-btns-ctr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buy {
+  width: 160px;
+  color: white;
+  background: none;
+  padding: 10px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: .2s ease all;
+  margin: 5% 0;
+}
+
+.buy:hover {
+  color: rgba(51,22,92,1);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+
 .info-logo {
   margin-top: 5%;
   height: 10%;

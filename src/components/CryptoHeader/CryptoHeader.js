@@ -17,8 +17,10 @@ const oneCrypto = () => {
       <h2>{crypto[0].name} <strong>({crypto[0].symbol})</strong></h2>
       {hover && (
         <div className='crypto-info'>
-          <h3>{crypto[0].price}</h3>
-          <h3>{crypto[0].circulating_supply}</h3>
+          <h3>Current Price</h3>
+          <p>${parseFloat(crypto[0].price).toFixed(2)}</p>
+          <h3>Current Circ. Supply</h3>
+          <p>{new Number(crypto[0].circulating_supply).toLocaleString()}</p>
         </div>
       )}
     </div>

@@ -6,6 +6,10 @@
   padding: 2% 3%;
 }
 
+.all-tarot-ctr {
+  text-align: center;
+}
+
 @media screen and (max-width: 1900px) {
   .all-tarot {
     grid-template-columns: repeat(6, 1fr);

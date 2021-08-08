@@ -1,6 +1,8 @@
 import { Redirect, Link } from 'react-router-dom'
 import './CryptosInfo.css'
 import PriceChange from '../PriceChange/PriceChange'
+import Btn from '../Btn/Btn'
+import { icons } from '../../utilities/images'
 const dayjs = require('dayjs')
 const LocalizedFormat = require('dayjs/plugin/localizedFormat')
 dayjs.extend(LocalizedFormat)
@@ -71,8 +73,10 @@ const CryptosInfo = ({crypto}) => {
               </tbody>
           </table>
         </div>
-        <a target="_blank"href={`https://crypto.com/price/${formatName(crypto.name)}`}><button className="buy">Buy</button></a>
-        <Link to="/cryptos"><button>Back to Cryptos</button></Link>
+        <div className="cryptos-info-btns-ctr">
+        <a target="_blank"href={`https://crypto.com/price/${formatName(crypto.name)}`}><button className="buy">Purchase {crypto.name}</button></a>
+        <Btn icon={icons[8]} active={icons[9]} url="/cryptos" alt="View All Cryptos" />
+        </div>
       </section>
       }
     </>

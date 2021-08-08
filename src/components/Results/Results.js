@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import {getRandomElement} from '../../utilities/utils'
 import {formatResults} from '../../utilities/ResultsUtils'
 import {Link} from 'react-router-dom'
+import Btn from '../Btn/Btn'
+import { icons } from '../../utilities/images'
 import './Results.css'
 // import { images } from '../../utilities/images'
 
@@ -18,17 +20,17 @@ const Results = ({result, crypto, card, image}) => {
       formatted = formatResults(choice, card.keywords, crypto)
       if (formatted[1] > 1) {
         return (
-          <div>
+          <div className="cryptos-btns">
             <Link to={`/cryptos/${crypto[0].id}`}>
-              <button className="learn-more">Learn about {crypto[0].name}</button>
+              <button className="learn-more">Learn about {crypto[0].name} <span><img src={crypto[0].logo} alt="logo"/></span></button>
             </Link>
             <Link to={`/cryptos/${crypto[1].id}`}>
-              <button className="learn-more">Learn about {crypto[1].name}</button>
+              <button className="learn-more">Learn about {crypto[1].name} <span><img src={crypto[1].logo} alt="logo"/></span></button>
             </Link>
           </div>
         )
       }
-      return (<Link to={`/cryptos/${crypto[0].id}`}><button className="learn-more">Learn about {crypto[0].name}</button></Link>)
+      return (<Link to={`/cryptos/${crypto[0].id}`}><button className="learn-more">Learn about {crypto[0].name} <span><img src={crypto[0].logo} alt="logo"/></span></button></Link>)
     }
   }
 
@@ -39,7 +41,7 @@ const Results = ({result, crypto, card, image}) => {
         <section className="results-container">
           <div className="result-tagline">
             <h2 className="tagline">{result.tagline}</h2>
-            {formatResults(choice, card.keywords, crypto)[0]}
+            <p>{formatResults(choice, card.keywords, crypto)[0]}</p>
           <div>{renderCryptos()}</div>
         </div>
 
@@ -55,8 +57,7 @@ const Results = ({result, crypto, card, image}) => {
           </div>
         </section>
         <section className="results-btns">
-          <Link style={{textDecoration: 'none'}} to="/pick"><button>New Reading</button></Link>
-          <Link style={{textDecoration: 'none'}} to="/"><button>Go Home</button></Link>
+          <Btn icon={icons[2]} active={icons[3]} url="/pick" alt={"Get a New Reading"} /><Btn icon={icons[13]} active={icons[14]} url="/" alt={"Go Home"} />
         </section>
       </div>
       }

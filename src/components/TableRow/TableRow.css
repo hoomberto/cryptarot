@@ -14,6 +14,11 @@
   cursor: pointer;
 }
 
+.more-info {
+  cursor: pointer;
+  width: 120px;
+}
+
 tr td {
   text-align: center;
 }

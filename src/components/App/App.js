@@ -112,7 +112,8 @@ const App = () => {
                 return {
                   name: crypto.name,
                   symbol: crypto.symbol,
-                  id: crypto.id
+                  id: crypto.id,
+                  logo: crypto.logo_url
                 }
               })}
               card={tarotData.currentCard}

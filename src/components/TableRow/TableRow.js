@@ -14,7 +14,7 @@ const TableRow = ({rank, logo, name, symbol, price, circSupply, maxSupply, id}) 
       <td className="price">{price}</td>
       <td className="circ-supply">{circSupply}</td>
       <td className="max-supply">{maxSupply || "N/A"}</td>
-      <td className=""><Link to={`/cryptos/${id}`}><button className="buy">More Info</button></Link></td>
+      <td className=""><Link to={`/cryptos/${id}`}><button className="more-info">More Info</button></Link></td>
     </tr>
   )
 }
