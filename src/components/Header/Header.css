@@ -59,6 +59,7 @@ a {
 
 ul {
   list-style-type: none;
+  text-align: right;
 }
 
 @media screen and (max-width: 600px) {
@@ -96,7 +97,7 @@ ul {
     right: 0;
     z-index: 2;
     flex-direction: column;
-    background: white;
+    background: rgba(0,0,0,0.65);
     width: 50%;
     top: 0;
     text-align: right;
@@ -107,6 +108,12 @@ ul {
   .close-btn {
     background: none;
     border: none;
+    cursor: pointer;
+    transition: .2s ease all;
+  }
+
+  .close-btn:hover .close {
+    transform: rotateY(35deg);
   }
 
 

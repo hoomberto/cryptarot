@@ -23,7 +23,7 @@ const Header = () => {
         <img className="menu-icon close" src={icons[12]} alt="close" />
       </button>
         <ul>
-          <li onClick={() => setClicked(false)}><Link to="/cryptos">View Cryptocurrencies</Link></li>
+          <li onClick={() => setClicked(false)}><Link to="/cryptos">View Cryptos</Link></li>
           <li onClick={() => setClicked(false)}><Link to="/tarot">View Tarot</Link></li>
           <li onClick={() => setClicked(false)}><Link to="/pick">Get a Reading</Link></li>
         </ul>
