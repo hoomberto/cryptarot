@@ -49,8 +49,11 @@ strong {
     height: 20px;
   }
 
+  .crypto-header-container {
+    transform: none;
+  }
+
   strong {
-    transform: translate(9px, 9px);
-    font-size: 11px;
+    display: none;
   }
 }
