@@ -61,7 +61,10 @@ const CardChoice = ({ data, isNew, setIsNew, newTarotCard, loading}) => {
 export default CardChoice
 
 CardChoice.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.object
+  ]).isRequired,
   isNew: PropTypes.bool.isRequired,
   setIsNew: PropTypes.func.isRequired,
   newTarotCard: PropTypes.func.isRequired,
