@@ -1,4 +1,4 @@
-const nomics = "https://api.nomics.com/v1/currencies/ticker?key=39882e2a6e59afede70e88be7f53e7d7ed14b4c0"
+const nomics = "https://powerful-fjord-58193.herokuapp.com/https://api.nomics.com/v1/currencies/ticker?key=39882e2a6e59afede70e88be7f53e7d7ed14b4c0"
 
 const getCards = () => {
   return fetch('https://cryptarot-api.herokuapp.com/api/v1/cards')
