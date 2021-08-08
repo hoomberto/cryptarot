@@ -16,7 +16,13 @@ CrypTarot is an app meant to appeal to people whose interests are at the crossro
 
 Created with React during Mod 3 of the FE program at the Turing School of Software & Design. This final project revolved around creating a React-based application for a specific, niche audience, along with demonstrating a mastery of React, React Router, Asynchronous JS, and End to End testing with Cypress. 
 
-![Mobile Design](./src/assets/readme/mobile1.png)
+![Desktop Design 1](./src/assets/readme/desk1.png)
+![Desktop Design 2](./src/assets/readme/desk2.png)
+![Desktop Design 3](./src/assets/readme/desk3.png)
+![Desktop Design 4](./src/assets/readme/desk4.png)
+![Desktop Design 5](./src/assets/readme/desk5.png)
+![Mobile Design 1](./src/assets/readme/mobile1.png)
+![Mobile Design 2](./src/assets/readme/mobile2.png)
 
 ## Features
 
