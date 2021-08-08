@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 const PriceChange = ({time, price_change, price_change_pct, volume, volume_change, volume_change_pct, market_cap, market_cap_pct}) => {
   return (
     <tr>
@@ -11,3 +12,14 @@ const PriceChange = ({time, price_change, price_change_pct, volume, volume_chang
 }
 
 export default PriceChange
+
+PriceChange.propTypes = {
+  time: PropTypes.string.isRequired,
+  price_change: PropTypes.string.isRequired,
+  price_change_pct: PropTypes.string.isRequired,
+  volume: PropTypes.string.isRequired,
+  volume_change: PropTypes.string.isRequired,
+  volume_change_pct: PropTypes.string.isRequired,
+  market_cap: PropTypes.string.isRequired,
+  market_cap_pct: PropTypes.string.isRequired
+}
