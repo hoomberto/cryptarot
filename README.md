@@ -56,10 +56,10 @@ Run `npm start`
 </p>
 
 ## Future Additions
-- [ ] Incorporate reverse cards to allow for reveres meanings and even more results
+- [ ] Incorporate reverse cards to allow for reverse meanings and even more results
 - [ ] Incorporate classic 15-card spread *(Golden Dawn Method)* suggested for use with this particular Tarot Deck *(Book of Thoth)*
 - [ ] Allow for multiple card spread that will be able to give more detailed reading 
-- [ ] Incorporate spreads to have multiple card arrangements to have readings done 
+- [ ] Incorporate multiple spreads to have different card arrangements for different types of readings
 - [ ] Save readings to a “saved-readings” page which utilizes POST functionality that all Users will be able to utilize
 
 ## Contributors
