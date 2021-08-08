@@ -2,10 +2,11 @@
 import React, {useState} from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 import CryptoTable from '../CryptoTable/CryptoTable'
+import Loading from '../Loading/Loading'
 import { Link } from 'react-router-dom'
 import './CryptosPage.css'
 
-const CryptosPage = ({ data }) => {
+const CryptosPage = ({ data, loading }) => {
   const [query, setQuery] = useState('')
 
   const queryResults = (data) => {
@@ -28,7 +29,7 @@ const CryptosPage = ({ data }) => {
 
   return (
     <>
-      {!data ? <h2>The spirits are crunching some numbers... </h2> : renderTable()}
+      {!data ? <Loading image={loading} message="One moment - the spirits are crunching numbers..." /> : renderTable()}
     </>
   )
 

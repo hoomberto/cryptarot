@@ -11,8 +11,8 @@ img {
 
 .sun-graphic,
 .moon-graphic {
-  width: 170px;
-  height: 170px;
+  width: 120px;
+  height: 120px;
   margin: 0;
 }
 
@@ -50,9 +50,11 @@ img {
   text-align: center;
 }
 
+.info-btn-ctr {
+  display: flex;
+}
+
 .graphic-block {
-  width: 25vw;
-  height: 45vh;
   display: grid;
   place-items: center;
 }
