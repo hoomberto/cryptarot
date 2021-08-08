@@ -28,7 +28,7 @@
 .crypto-info {
   position: absolute;
   z-index: 2;
-  transform: translate(22px,-150px);
+  transform: translate(0,-180px);
   background: rgba(0,0,0, 0.85);
   color: white;
   padding: 0 10px;
