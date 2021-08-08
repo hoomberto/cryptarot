@@ -1,6 +1,6 @@
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 0;
 }
 
@@ -25,7 +25,7 @@ button div p {
 
 @media screen and (max-width: 600px) {
   .view-results {
-    padding: 5px 20px;
+    padding: 2px 20px;
   }
 
   .icon {
