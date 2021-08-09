@@ -117,7 +117,7 @@ const App = () => {
       }} />
       <Route exact path="/cryptos/:id" render={({match}) => {
         const { id } = match.params
-        return !tarotData ? <Redirect to="" /> : <CryptosInfo crypto={tarotData.cryptoData.find(crypto => crypto.id === id) || false} />
+        return !tarotData ? <ErrComp /> : <CryptosInfo crypto={tarotData.cryptoData.find(crypto => crypto.id === id) || false} />
       }} />
       <Route render={() => {
           return <Redirect to="/" />
