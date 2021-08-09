@@ -33,3 +33,11 @@ Cypress.Commands.add('performReading', () => {
   cy.get('.view-results').click()
   cy.url().should('contain', '/results')
 })
+
+
+Cypress.Commands.add('revealTarotAndReset', () => {
+  cy.get('#ar00Img').click()
+  cy.get('#ar01Img').click()
+  cy.get('#ar18Img').click()
+  cy.get('.shuffle-btn').click()
+})

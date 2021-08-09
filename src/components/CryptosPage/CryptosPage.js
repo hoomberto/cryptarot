@@ -18,7 +18,7 @@ const CryptosPage = ({ data, loading }) => {
     return (
       <>
       <div className='button-search-bar-ctr'>
-        <Link to="/"><button>Go Back</button></Link>
+        <Link id="backHomeFromCryptos" to="/"><button>Go Back</button></Link>
         <SearchBar query={query} set={setQuery} />
       </div>
         <div className="table-container">

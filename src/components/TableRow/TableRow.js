@@ -11,7 +11,7 @@ const TableRow = ({rank, logo, name, symbol, price, circSupply, maxSupply, id}) 
       <td className="price">${Number(price).toLocaleString()}</td>
       <td className="circ-supply">{Number(circSupply).toLocaleString()}</td>
       <td className="max-supply">{maxSupply ? Number(maxSupply).toLocaleString() : "N/A"}</td>
-      <td className=""><Link to={`/cryptos/${id}`}><button className="more-info">More Info</button></Link></td>
+      <td className=""><Link id={symbol} to={`/cryptos/${id}`}><button className="more-info">More Info</button></Link></td>
     </tr>
   )
 }

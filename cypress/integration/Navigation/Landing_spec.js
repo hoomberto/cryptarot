@@ -34,4 +34,10 @@ describe('Landing Page Navigation', () => {
     }
     cy.url().should('eq', 'http://localhost:3000/')
   })
+
+  it('Entering a nonexistent URL returns user to home page', () => {
+    cy.visit('http://localhost:3000/asdfjkl')
+    cy.wait(500)
+    cy.url().should('eq', 'http://localhost:3000/')
+  })
 })
