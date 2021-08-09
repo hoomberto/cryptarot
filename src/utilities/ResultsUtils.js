@@ -31,8 +31,6 @@ const formatResults = (tagline, keywords, symbol) => {
     injectResult = injectResult.replace('[keyword1]', keywords[0].toUpperCase())
   }
 
-  // injectResult = tagline.replace('[crypto1]', symbol)
-  // injectResult = injectResult.replace('[keyword1]', keywords[0].toUpperCase())
   injectResult = injectResult.replace(/’’/g, '\'')
   injectResult = injectResult.replace('‘', '\'')
   injectResult = injectResult.replace('’', '\'')
