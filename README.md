@@ -17,14 +17,6 @@ CrypTarot is an app meant to appeal to people whose interests are at the crossro
 
 Created with React during Mod 3 of the FE program at the Turing School of Software & Design. This final project revolved around creating a React-based application for a specific, niche audience, along with demonstrating a mastery of React, React Router, Asynchronous JS, and End to End testing with Cypress. 
 
-![Mobile Design 1](./src/assets/readme/mobile1.gif)
-![Mobile Design 2](./src/assets/readme/mobile2.gif)
-![Desktop Design 1](./src/assets/readme/desktop1.gif)
-![Desktop Design 2](./src/assets/readme/desktop2.gif)
-![Desktop Design 3](./src/assets/readme/desktop3.gif)
-![Desktop Design 4](./src/assets/readme/dekstop4.gif)
-
-
 ## Features
 
 - UI that accesses data from [CrypTarot API](https://github.com/hoomberto/cryptarot-api) and [Nomics API](https://nomics.com/docs/) to allow for Tarot readings involving various cryptocurrencies
@@ -34,6 +26,16 @@ Created with React during Mod 3 of the FE program at the Turing School of Softwa
 - Cryptocurrency data: Following reading, User is able to go to a page that contains further information about the cryptocurrency relevant to their reading, including price and volume changes over time, date of first trade, and a link to purchase the cryptocurrency. 
 - Currencies Section - User is able to view recent data on exchanges and search currencies by name or symbol. Each entry has a link that leads to that currency's unique link in the app.
 - Tarot Section - User can view all 78 cards present in the Book of Thoth, can click to reveal them one by one, and visit that card's unique page after revealing it. 
+
+## In use
+
+![Mobile Design 1](./src/assets/readme/mobile1.gif)
+![Mobile Design 2](./src/assets/readme/mobile2.gif)
+![Desktop Design 1](./src/assets/readme/desktop1.gif)
+![Desktop Design 2](./src/assets/readme/desktop2.gif)
+![Desktop Design 3](./src/assets/readme/desktop3.gif)
+![Desktop Design 4](./src/assets/readme/dekstop4.gif)
+
 
 ## Set Up
 
