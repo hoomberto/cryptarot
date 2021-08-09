@@ -1,9 +1,9 @@
 import './Loading.css'
 import PropTypes from 'prop-types'
 
-const Loading = ({image, message}) => {
+const Loading = ({cod, image, message}) => {
   return (
-    <div className="loading">
+    <div className={!cod ? "loading" : "loading-cod"}>
       <h2>{message}</h2>
       <img src={image} className="rotating" alt="loading" />
     </div>

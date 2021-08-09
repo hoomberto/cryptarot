@@ -46,7 +46,7 @@ const CryptosInfo = ({crypto}) => {
               <td>{crypto.rank}</td>
               <td>{crypto.name}</td>
               <td>${parseFloat(crypto.price).toFixed(2)}</td>
-              <td>{dayjs(crypto.first_trade).format("LLL")}</td>
+              <td id="firstTrade">{dayjs(crypto.first_trade).format("LLL")}</td>
               <td>{parseInt(crypto.circulating_supply).toLocaleString()}</td>
               <td>{crypto.max_supply ? parseInt(crypto.max_supply).toLocaleString() : "N/A"}</td>
               </tr>
@@ -72,7 +72,7 @@ const CryptosInfo = ({crypto}) => {
         </div>
         <div className="cryptos-info-btns-ctr">
         <a target="_blank" rel="noreferrer" href={`https://crypto.com/price/${formatName(crypto.name)}`}><button className="buy">Purchase {crypto.name}</button></a>
-        <Btn icon={icons[8]} active={icons[9]} url="/cryptos" alt="View All Cryptos" />
+        <Btn id="viewAllCryptos" icon={icons[8]} active={icons[9]} url="/cryptos" alt="View All Cryptos" />
         </div>
       </section>
       }

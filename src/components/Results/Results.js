@@ -22,16 +22,16 @@ const Results = ({result, crypto, card, image}) => {
       if (formatted[1] > 1) {
         return (
           <div className="cryptos-btns">
-            <Link to={`/cryptos/${crypto[0].id}`}>
+            <Link id="cryptoOne" to={`/cryptos/${crypto[0].id}`}>
               <button className="learn-more">Learn about {crypto[0].name} <span><img src={crypto[0].logo} alt={`${crypto[0].name} logo`}/></span></button>
             </Link>
-            <Link to={`/cryptos/${crypto[1].id}`}>
+            <Link id="cryptoTwo" to={`/cryptos/${crypto[1].id}`}>
               <button className="learn-more">Learn about {crypto[1].name} <span><img src={crypto[1].logo} alt={`${crypto[1].name} logo`}/></span></button>
             </Link>
           </div>
         )
       }
-      return (<Link to={`/cryptos/${crypto[0].id}`}><button className="learn-more">Learn about {crypto[0].name} <span><img src={crypto[0].logo} alt={`${crypto[0].name} logo`}/></span></button></Link>)
+      return (<Link id="cryptoOne" to={`/cryptos/${crypto[0].id}`}><button className="learn-more">Learn about {crypto[0].name} <span><img src={crypto[0].logo} alt={`${crypto[0].name} logo`}/></span></button></Link>)
     }
   }
 
@@ -49,7 +49,7 @@ const Results = ({result, crypto, card, image}) => {
           <div className="outer-img-container">
           <h2>{card.name}</h2>
             <div className="results-img-container">
-            <Link to={`/tarot/${card.name_short}`}><img
+            <Link id="resultImg" to={`/tarot/${card.name_short}`}><img
             className="results-img"
             src={image}
             alt={card.name}
@@ -58,7 +58,7 @@ const Results = ({result, crypto, card, image}) => {
           </div>
         </section>
         <section className="results-btns">
-          <Btn icon={icons[2]} active={icons[3]} url="/pick" alt={"Get a New Reading"} /><Btn icon={icons[13]} active={icons[14]} url="/" alt={"Go Home"} />
+          <Btn id="newReading" icon={icons[2]} active={icons[3]} url="/pick" alt={"Get a New Reading"} /><Btn id="goHome" icon={icons[13]} active={icons[14]} url="/" alt={"Go Home"} />
         </section>
       </div>
       }
