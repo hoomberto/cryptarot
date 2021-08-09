@@ -2,6 +2,10 @@ table {
   width: 100vw;
 }
 
+.no-results {
+  color: white;
+  padding: 0 4%;
+}
 
 .heading {
   font-size: 22px;

@@ -1,0 +1,9 @@
+.error {
+  color: white;
+  padding: 20% 5%;
+  text-align: right;
+}
+
+.error > h2 {
+    font-family: "Righteous", cursive;
+}

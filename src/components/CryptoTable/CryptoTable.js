@@ -19,7 +19,7 @@ const CryptoTable = ({data}) => {
   })
 
   return (
-    <>{! data.length ? <h2>No results found - please try another search</h2> :
+    <>{! data.length ? <h2 className="no-results">No results found - please try another search</h2> :
     <table>
       <tbody>
         <tr className="heading">

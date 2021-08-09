@@ -7,6 +7,7 @@ import CryptosInfo from '../CryptosInfo/CryptosInfo'
 import AllTarot from '../AllTarot/AllTarot'
 import Results from '../Results/Results'
 import TarotInfo from '../TarotInfo/TarotInfo'
+import ErrComp from '../ErrComp/ErrComp'
 import { getData } from '../../utilities/apiCalls'
 import { getRelevantResults } from '../../utilities/ResultsUtils'
 import { images, icons } from '../../utilities/images'
@@ -17,6 +18,7 @@ import './App.css';
 const App = () => {
   const [tarotData, setTarotData] = useState('')
   const [isNew, setIsNew] = useState(false)
+  const [errMsg, setErrMsg] = useState(false)
 
   useEffect(() => {
     let localResults = getCheckLocal();
@@ -31,7 +33,9 @@ const App = () => {
             currentCard: getRandomCard(data[0].cards),
             crypto: getRandomCrypto(data[1].slice(0, 150))
         })
+        setErrMsg(false)
       })
+      .catch(err => setErrMsg(true))
     }
     else {
       setTarotData({
@@ -56,27 +60,27 @@ const App = () => {
   return (
     <main>
     <Switch>
-    <Route exact path="/" component={Landing} />
+      <Route exact path="/" component={Landing} />
       <Route exact path="/pick" render={() => {
-        return <CardChoice
+        return !errMsg ? <CardChoice
           data={tarotData || false}
           isNew={isNew}
           setIsNew={setIsNew}
           newTarotCard={newTarotCard}
           loading={icons[10]}
-          />
+          /> : <ErrComp />
 
       }} />
-    <Route exact path="/tarot" render={() => {
-          return <AllTarot
+      <Route exact path="/tarot" render={() => {
+          return !errMsg ? <AllTarot
             images={images}
             tarot={!tarotData ? false : tarotData.cards.map(card => card.name_short)}
             icons={[icons[4], icons[5]]}
             loadingImage={icons[10]}
-            />
+            /> : <ErrComp />
         }}
       />
-    <Route exact path="/tarot/:name" render={({match}) => {
+      <Route exact path="/tarot/:name" render={({match}) => {
           const { name } = match.params
           return !tarotData
           ? <Redirect to="" />
@@ -86,7 +90,7 @@ const App = () => {
           />
         }} />
       <Route exact path="/pick/results" render={() => {
-          return (
+          return !errMsg ? (
             <>
             {
               !tarotData ? <h2>Loading...</h2> : <Results
@@ -104,20 +108,21 @@ const App = () => {
               />
             }
             </>
-          )
+        ) : <ErrComp />
         }
       }
-        />
+      />
       <Route exact path="/cryptos" render={() => {
-        return <CryptosPage loading={icons[10]} data={tarotData.cryptoData || false} />
+        return !errMsg ? <CryptosPage loading={icons[10]} data={tarotData.cryptoData || false} /> : <ErrComp />
       }} />
-    <Route exact path="/cryptos/:id" render={({match}) => {
+      <Route exact path="/cryptos/:id" render={({match}) => {
         const { id } = match.params
         return !tarotData ? <Redirect to="" /> : <CryptosInfo crypto={tarotData.cryptoData.find(crypto => crypto.id === id) || false} />
       }} />
-    <Route render={() => {
-      return <Redirect to="/" />
-    }} />
+      <Route render={() => {
+          return <Redirect to="/" />
+        }}
+      />
     </Switch>
     </main>
   );

@@ -5,7 +5,6 @@ const getCards = () => {
     .then(checkResponse)
 }
 
-
 const getCryptoData = () => {
   return fetch(nomics)
   .then(checkResponse)
