@@ -39,7 +39,6 @@ strong {
   position: absolute;
   font-size: 14px;
   transform: translate(6px, 12px);
-  /* margin: auto; */
 }
 
 @media screen and (max-width: 800px) {

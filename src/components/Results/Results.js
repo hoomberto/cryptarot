@@ -6,7 +6,6 @@ import Btn from '../Btn/Btn'
 import { icons } from '../../utilities/images'
 import PropTypes from 'prop-types'
 import './Results.css'
-// import { images } from '../../utilities/images'
 
 const Results = ({result, crypto, card, image}) => {
   const [choice, setChoice] = useState('')

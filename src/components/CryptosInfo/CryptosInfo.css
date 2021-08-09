@@ -1,5 +1,4 @@
 .expanded-table {
-  /* table-layout: fixed; */
   background: none;
   color: black;
   width: 100%;
@@ -47,7 +46,6 @@
   color: rgba(51,22,92,1);
   background: rgba(255, 255, 255, 0.85);
 }
-
 
 .info-logo {
   margin-top: 5%;
