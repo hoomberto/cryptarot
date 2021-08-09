@@ -1,5 +1,6 @@
-import './TarotInfo.css'
 import { useHistory } from "react-router-dom";
+import PropTypes from 'prop-types'
+import './TarotInfo.css'
 
 const TarotInfo = ({card, url}) => {
   let history = useHistory();
@@ -29,3 +30,8 @@ const TarotInfo = ({card, url}) => {
 }
 
 export default TarotInfo
+
+TarotInfo.propTypes = {
+  card: PropTypes.object.isRequired,
+  url: PropTypes.string.isRequired
+}

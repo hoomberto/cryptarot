@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import './ShuffleBtn.css'
 
 
@@ -21,3 +22,10 @@ const ShuffleBtn = ({ icon, active, shuffle, alt }) => {
 }
 
 export default ShuffleBtn
+
+ShuffleBtn.propTypes = {
+  icon: PropTypes.string.isRequired,
+  active: PropTypes.string.isRequired,
+  shuffle: PropTypes.func.isRequired,
+  alt: PropTypes.string.isRequired
+}

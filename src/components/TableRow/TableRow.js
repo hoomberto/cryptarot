@@ -1,4 +1,5 @@
 import './TableRow.css'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 const TableRow = ({rank, logo, name, symbol, price, circSupply, maxSupply, id}) => {
@@ -16,3 +17,14 @@ const TableRow = ({rank, logo, name, symbol, price, circSupply, maxSupply, id}) 
 }
 
 export default TableRow
+
+TableRow.propTypes = {
+  rank: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  symbol: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  circSupply: PropTypes.string.isRequired,
+  maxSupply: PropTypes.string,
+  id: PropTypes.string.isRequired
+}

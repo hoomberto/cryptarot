@@ -1,4 +1,5 @@
 import './CardInfo.css'
+import PropTypes from 'prop-types'
 
 const CardInfo = ({card, clicked}) => {
   return (
@@ -15,3 +16,8 @@ const CardInfo = ({card, clicked}) => {
 }
 
 export default CardInfo
+
+CardInfo.propTypes = {
+  card: PropTypes.object.isRequired,
+  clicked: PropTypes.bool.isRequired
+}

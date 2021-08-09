@@ -6,8 +6,8 @@ import Btn from '../Btn/Btn'
 import Loading from '../Loading/Loading'
 import { getRandomCard, getRandomCrypto } from '../../utilities/utils'
 import './CardChoice.css'
+import PropTypes from 'prop-types'
 import { graphics, icons } from '../../utilities/images'
-
 
 const CardChoice = ({ data, isNew, setIsNew, newTarotCard, loading}) => {
 
@@ -59,3 +59,14 @@ const CardChoice = ({ data, isNew, setIsNew, newTarotCard, loading}) => {
 }
 
 export default CardChoice
+
+CardChoice.propTypes = {
+  data: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.object
+  ]).isRequired,
+  isNew: PropTypes.bool.isRequired,
+  setIsNew: PropTypes.func.isRequired,
+  newTarotCard: PropTypes.func.isRequired,
+  loading: PropTypes.string.isRequired
+}

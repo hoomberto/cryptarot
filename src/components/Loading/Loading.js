@@ -1,4 +1,5 @@
 import './Loading.css'
+import PropTypes from 'prop-types'
 
 const Loading = ({image, message}) => {
   return (
@@ -10,3 +11,8 @@ const Loading = ({image, message}) => {
 }
 
 export default Loading
+
+Loading.propTypes = {
+  image: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired
+}

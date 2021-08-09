@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import './SearchBar.css'
 const SearchBar = ({query, set}) => {
 
@@ -17,3 +18,8 @@ const SearchBar = ({query, set}) => {
 }
 
 export default SearchBar
+
+SearchBar.propTypes = {
+  query: PropTypes.string.isRequired,
+  set: PropTypes.func.isRequired
+}

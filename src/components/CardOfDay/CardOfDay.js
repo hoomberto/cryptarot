@@ -5,7 +5,7 @@ import { images, icons } from '../../utilities/images'
 import { Link } from 'react-router-dom'
 import './CardOfDay.css'
 
-const CardOfDay = ({ loading }) => {
+const CardOfDay = () => {
 
   const [card, setCard] = useState('')
   const [errMsg, setErrMsg] = useState('')

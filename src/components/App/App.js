@@ -11,23 +11,12 @@ import { getData } from '../../utilities/apiCalls'
 import { getRelevantResults } from '../../utilities/ResultsUtils'
 import { images, icons } from '../../utilities/images'
 
-// import CardContext from '../../Context/CardContext';
 import { getRandomCard, getRandomCrypto, getCheckLocal, setAllLocal, getRandomElement } from '../../utilities/utils'
 import './App.css';
 
 const App = () => {
   const [tarotData, setTarotData] = useState('')
   const [isNew, setIsNew] = useState(false)
-
-  // const [reading, setReading] = useState('')
-  // // const [clicked, setClicked] = useState(false)
-  // const newReading = () => {
-  //   // setClicked(false)
-  //   setReading({
-  //     currentCard: getRandomCard(tarotData.cards),
-  //     crypto: getRandomCrypto(tarotData.cryptoData)
-  //   })
-  // }
 
   useEffect(() => {
     let localResults = getCheckLocal();
@@ -55,12 +44,7 @@ const App = () => {
     }
     return setIsNew(false)
   }, [])
-  //
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     newReading()
-  //   })
-  // }, [tarotData.crypto])
+
   const newTarotCard = ({card, crypto}) => {
     setTarotData({
       ...tarotData,
@@ -68,7 +52,6 @@ const App = () => {
       crypto
     })
   }
-
 
   return (
     <main>
@@ -105,7 +88,6 @@ const App = () => {
       <Route exact path="/pick/results" render={() => {
           return (
             <>
-
             {
               !tarotData ? <h2>Loading...</h2> : <Results
               result={getRandomElement(getRelevantResults(tarotData.currentCard.meaning_weight, tarotData.currentCard.keywords, tarotData.results)) || getRandomElement(tarotData.results)}
