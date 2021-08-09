@@ -20,6 +20,6 @@ PriceChange.propTypes = {
   volume: PropTypes.string.isRequired,
   volume_change: PropTypes.string.isRequired,
   volume_change_pct: PropTypes.string.isRequired,
-  market_cap: PropTypes.string.isRequired,
-  market_cap_pct: PropTypes.string.isRequired
+  market_cap: PropTypes.string,
+  market_cap_pct: PropTypes.string
 }
