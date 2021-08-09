@@ -14,12 +14,12 @@ const CardOfDay = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await getDailyCard()
+        const response = await getDailyCard().catch(error => setErrMsg(true))
         setCard(response.card)
         setErrMsg(false)
       }
       catch (err) {
-        setErrMsg(true)
+        throw err
       }
     }
     fetchData()
@@ -27,8 +27,7 @@ const CardOfDay = () => {
 
   return (
     <div className="cod-ctr"><h2 className="cod-title">Card of the Day</h2>
-    {!!errMsg && <ErrComp />}
-    {!card && !errMsg ? <Loading cod={true} image={icons[10]} message="Summoning card of the day..." /> : <div className="card-of-day-ctr">
+    {(!card && !errMsg) ? <Loading cod={true} image={icons[10]} message="Summoning card of the day..." /> : (!card && errMsg) ? <ErrComp /> : <div className="card-of-day-ctr">
     <Link to={`/tarot/${card.name_short}`}><img className="cod" src={images.find(image => image.includes(card.name_short))} alt={card.name} /></Link>
         <p className="cod-name">{card.name}</p>
         <p className={!errMsg ? "cod-desc" : "err-desc"}>{card.description}</p>
