@@ -15,6 +15,22 @@ const formatName = (name) => {
   return (/\w/g.test(name)) ? name.toLowerCase().replaceAll(' ', '-') : name.toLowerCase()
 }
 
+const formatTime = (date) => {
+  if (date === 'ytd') {
+    return 'YTD'
+  }
+  let split = date.split('d')
+  let time = parseInt(split[0])
+  return (time % 365 === 0)
+  ? 'Year'
+  : (time % 30 === 0)
+  ? 'Month'
+  : (time % 7 === 0)
+  ? 'Week'
+  : 'Day'
+}
+
+
 const shuffle = (array) => {
   const toShuffle = array
   for (let i = toShuffle.length - 1; i > 0; i--) {
@@ -54,4 +70,4 @@ const getCheckLocal = () => {
 }
 
 
-export { getRandomElement, getRandomCard, getRandomCrypto, setAllLocal, getCheckLocal, shuffle, formatName }
+export { formatTime, getRandomElement, getRandomCard, getRandomCrypto, setAllLocal, getCheckLocal, shuffle, formatName }
