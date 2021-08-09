@@ -1,13 +1,9 @@
-
 img {
   height: 400px;
   width: 267px;
   border-radius: 20px;
   transition: .2s ease all;
-  /* margin: 0 7%; */
 }
-
-
 
 .sun-graphic,
 .moon-graphic {
@@ -21,17 +17,11 @@ img {
   z-index: 0;
   width: 70vw;
   opacity: 0.3;
-  /* height: 780px; */
-  /* width: 200px;
-  height: 300px; */
 }
 
 .active-card-bg {
   transition: .3s ease all;
-  /* background: linear-gradient(293deg, rgba(45,45,45,1) 0%, rgba(29,29,29,1) 100%); */
-  /* background: linear-gradient(293deg, rgba(246,191,105,1) 0%, rgba(222,123,105,1) 100%); */
 }
-
 
 .card-container {
   display: flex;
@@ -63,7 +53,6 @@ img {
   position: relative;
   z-index: 1;
 }
-
 
 @media screen and (max-width: 650px) {
   .graphic-block {

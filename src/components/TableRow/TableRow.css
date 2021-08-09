@@ -31,5 +31,4 @@ tr:nth-of-type(odd) {
 
 tr:nth-of-type(even) {
   color: white;
-  /* border-top: 1px solid gray; */
 }

@@ -93,7 +93,6 @@ span > img {
     align-items: center;
   }
 
-
 }
 
 @media screen and (max-width: 800px) {
@@ -114,7 +113,6 @@ span > img {
 
 
   .result-tagline {
-    /* margin-top: 10px; */
     width: auto;
     border-radius: 0 0 18px 18px;
   }
@@ -137,6 +135,5 @@ span > img {
   .results-btns button {
     padding: 3px;
     margin: 5% 0;
-    /* width: 30vw; */
   }
 }

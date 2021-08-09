@@ -16,14 +16,8 @@
   padding: 20px;
   width: 200px;
   margin: 5% 0;
-  /* transition: .2s ease all;
-  color: white; */
 }
-/*
-.main-links-ctr a button:hover {
-  color: rgba(51,22,92,1);
-  background: rgba(255, 255, 255, 0.85);
-} */
+
 
 @media screen and (max-width: 800px) {
   .main-ctr {
