@@ -5,17 +5,17 @@
 
 ## Overview
 
-“Investing meets the Occult!”
+*Investing meets the Occult!*
 Consult the spirits and have Tarot cards from the Book of Thoth cast judgment on your financial prospects - should you HODL on DOGE, go all in on BTC, or stay far away from THETA? 
 
 CrypTarot will decipher the deeper meaning from within the cards and guide you to sound financial futures. 
 
-### Disclaimer
-*(CrypTarot is not responsible for any resulting gains or losses accrued by the user and is not meant to be used for serious financial decisions or advice)*
-
 CrypTarot is an app meant to appeal to people whose interests are at the crossroads of modern tech (i.e. cryptocurrency) and occult topics (they use the Co-Stars app, enjoy astrology, tarot, witch things). It provides a novel, fun, and educational experience in learning about cryptocurrencies/current exchanges and Tarot card meanings.  
 
 Created with React during Mod 3 of the FE program at the Turing School of Software & Design. This final project revolved around creating a React-based application for a specific, niche audience, along with demonstrating a mastery of React, React Router, Asynchronous JS, and End to End testing with Cypress. 
+
+#### Disclaimer
+*(CrypTarot is not responsible for any resulting gains or losses accrued by the user and is not meant to be used for serious financial decisions or advice)*
 
 ## Features
 
