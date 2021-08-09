@@ -11,4 +11,10 @@ describe('Landing Page', () => {
   it('User should see a header with the name of the app upon page load', () => {
     cy.get('header').contains('CRYPTAROT')
   })
+
+  it('User should see navigation links in header that takes them to various site routes', () => {
+    cy.get('header').get('a:nth-of-type(1)').contains('Get a Reading')
+    cy.get('header').get('a:nth-of-type(2)').contains('View Cryptos')
+    cy.get('header').get('a:nth-of-type(3)').contains('View Tarot')
+  })
 })
