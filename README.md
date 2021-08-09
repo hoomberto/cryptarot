@@ -57,6 +57,7 @@ Run `npm start`
   <img src="https://img.shields.io/badge/-React%20Router-CA4245?logo=react-router" alt="React Router" />
   <img src="https://img.shields.io/badge/-Cypress-gray" alt="Cypress" />
   <img src="https://img.shields.io/badge/-Heroku%20Deployed-orange" alt="Heroku" />
+  <img src="https://img.shields.io/badge/-dayJS-yellowgreen" alt="dayJS" />
 </p>
 
 ## Future Additions
