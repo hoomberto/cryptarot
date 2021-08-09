@@ -22,7 +22,6 @@ Created with React during Mod 3 of the FE program at the Turing School of Softwa
 ![Desktop Design 1](./src/assets/readme/desktop1.gif)
 ![Desktop Design 3](./src/assets/readme/desktop2.gif)
 ![Desktop Design 4](./src/assets/readme/desktop3.gif)
-![Desktop Design 5](./src/assets/readme/desktop4.gif)
 
 
 ## Features
