@@ -1,35 +1,36 @@
 describe('Reading', () => {
 
-  // beforeEach(() => {
-  //   cy.intercept("https://powerful-fjord-58193.herokuapp.com/https://api.nomics.com/v1/currencies/ticker?key=39882e2a6e59afede70e88be7f53e7d7ed14b4c0", {fixture: 'cryptos.json'})
-  //   cy.intercept('https://cryptarot-api.herokuapp.com/api/v1/cards', {fixture: 'cards.json'})
-  //   cy.intercept('https://cryptarot-api.herokuapp.com/api/v1/daily', {fixture: 'cardOfDay.json'})
-  //   cy.intercept('https://cryptarot-api.herokuapp.com/api/v1/results', {fixture: 'results.json'})
-  //   cy.visit('http://localhost:3000');
-  // });
+  beforeEach(() => {
+    cy.intercept("https://powerful-fjord-58193.herokuapp.com/https://api.nomics.com/v1/currencies/ticker?key=39882e2a6e59afede70e88be7f53e7d7ed14b4c0", {fixture: 'cryptos.json'})
+    cy.intercept('https://cryptarot-api.herokuapp.com/api/v1/cards', {fixture: 'cards.json'})
+    cy.intercept('https://cryptarot-api.herokuapp.com/api/v1/daily', {fixture: 'cardOfDay.json'})
+    cy.intercept('https://cryptarot-api.herokuapp.com/api/v1/results', {fixture: 'results.json'})
+    cy.visit('http://localhost:3000/pick');
+  });
 
-  // it('User should be able to click "Get a Reading" link in header to navigate to card reading page', () => {
-  //   cy.get('header').get('a:nth-of-type(1)').contains('Get a Reading').click()
-  //   cy.url().should('contain', '/pick')
-  // })
+  it('User should see unflipped Card component on visiting page', () => {
+    cy.get('img').should('have.class', 'back')
+  })
 
-  // it('User should see navigation links in header', () => {
-  //   cy.get('header').get('a:nth-of-type(1)').contains('Get a Reading')
-  //   cy.get('header').get('a:nth-of-type(2)').contains('View Cryptos')
-  //   cy.get('header').get('a:nth-of-type(3)').contains('View Tarot')
-  // })
-  //
-  // it('User should see buttons that reflect navigation links in header', () => {
-  //   cy.get('.main-links-ctr').get('a:nth-of-type(1)').get('button').contains('Get a Reading')
-  //   cy.get('.main-links-ctr').get('a:nth-of-type(2)').get('button').contains('View Cryptos')
-  //   cy.get('.main-links-ctr').get('a:nth-of-type(3)').get('button').contains('View Tarot')
-  // });
-  //
-  // it('User should see Card of Day component that displays a card image, title, and description', () => {
-  //   cy.get('.cod-title').contains('Card of the Day')
-  //   cy.get('.card-of-day-ctr').get('img')
-  //   cy.get('.card-of-day-ctr').get('img')
-  //   cy.get('.main-links-ctr').get('a:nth-of-type(3)').get('button').contains('View Tarot')
-  // })
+  it('User should see text encouraging them to interact with the Card', () => {
+    cy.contains('Touch the card to see your reading')
+  })
 
+  it('User should see flipped card upon clicking it', () => {
+    cy.get('.back').click()
+    cy.get('img').should('have.class', 'front')
+  })
+
+  it('User should see a cryptocurrency relevant to the reading upon flipping card', () => {
+    cy.get('.back').click()
+    cy.contains('Bitcoin')
+  })
+
+  it('User should be navigated to their results after flipping card and clicking "View Results"', () => {
+    cy.get('.back').click()
+    cy.get('img').should('have.class', 'front')
+    cy.contains('Bitcoin')
+    cy.get('.view-results').click()
+    cy.url().should('contain', '/results')
+  })
 })
