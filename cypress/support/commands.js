@@ -27,3 +27,9 @@
 Cypress.Commands.add('navBarGoTo', (ofType, shouldContain) => {
   cy.get('header').get(`a:nth-of-type(${ofType})`).contains(shouldContain).click()
 })
+
+Cypress.Commands.add('performReading', () => {
+  cy.get('.back').click()
+  cy.get('.view-results').click()
+  cy.url().should('contain', '/results')
+})

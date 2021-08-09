@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import './Btn.css'
 
 
-const Btn = ({ icon, active, url, alt }) => {
+const Btn = ({ id, icon, active, url, alt }) => {
   const [hover, setHover] = useState(false);
 
   return (
-    <Link to={url}>
+    <Link id={id} to={url}>
       <button
         className="view-results"
         onMouseEnter={() => setHover(true)}
