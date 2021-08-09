@@ -35,13 +35,6 @@ const AllTarot = ({ images, tarot, icons, loadingImage }) => {
 
 export default AllTarot
 
-// optionalUnion: PropTypes.oneOfType([
-//   PropTypes.string,
-//   PropTypes.number,
-//   PropTypes.instanceOf(Message)
-// ]),
-
-
 AllTarot.propTypes = {
   images: PropTypes.array.isRequired,
   tarot: PropTypes.oneOfType([
