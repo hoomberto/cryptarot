@@ -1,0 +1,73 @@
+{
+results:
+  [
+    {
+      "result_id": 1,
+      "tagline": "The spirits are very much in your favor!",
+      "result_choices": [
+      "They are rejoicing ‘[keyword1] with [crypto1]’. Rejoice with them and invest!",
+      "Does it get any better than this? [keyword1] with [crypto1] and [keyword2] with [crypto2]. Go play the lottery while you’’re at it!"
+      ],
+      "word_association": [
+      "Abundance",
+      "Luck",
+      "Courage",
+      "Strength",
+      "Achievement",
+      "Fulfillment"
+      ],
+      "category": "very_positive"
+    },
+    {
+      "result_id": 39,
+      "tagline": "Avoid at all costs",
+      "result_choices": [
+      "The spirits are crying ‘[keyword1]’ in regard to [crypto1]. Either stay far away, or invest in some on behalf of an enemy.",
+      "With [keyword1] and [keyword2] surrounding all matters involving both [crypto1] and [crypto2], maybe stay away, and light some sage for good measure."
+      ],
+      "word_association": [
+      "Peril",
+      "Danger",
+      "Disaster",
+      "Ruin",
+      "Misfortune",
+      "Defeat",
+      "Extreme unhappiness",
+      "Despair"
+      ],
+      "category": "very_negative"
+    },
+    {
+      "result_id": 7,
+      "tagline": "Manifest your intentions into reality",
+      "result_choices": [
+      "The spirits believe ‘[keyword1]’ sums up what’’s currently at play with [crypto1]. It seems to be a good thing!",
+      "If you knew that spirits are associating [keyword1] and [keyword2] with both [crypto1] and [crypto2], would you invest in either? This seems to be the case."
+      ],
+      "word_association": [
+      "Determined",
+      "Resourceful",
+      "Hidden talents",
+      "Enthusiasm",
+      "Authority",
+      "Power"
+      ],
+      "category": "positive"
+    },
+    {
+      "result_id": 45,
+      "tagline": "Do some self reflection",
+      "result_choices": [
+      "If [keyword1] is at all relevant in your life currently, by all means, take care of that first before getting involved with [crypto1].",
+      "With [keyword1], [keyword2], and a few other related terms at work here, the spirits suggest avoiding [crypto1] altogether, and waiting on [crypto2] for at least two weeks."
+      ],
+      "word_association": [
+      "Naivety",
+      "Self-absorption",
+      "Greed",
+      "Corruption"
+      ],
+      "category": "very_negative"
+    }
+  ]
+}

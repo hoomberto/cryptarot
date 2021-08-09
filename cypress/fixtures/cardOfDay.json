@@ -1,0 +1,20 @@
+{
+  "card":
+  {
+    "card_id": 62,
+    "type": "minor",
+    "name_short": "sw12",
+    "name": "Prince of Swords",
+    "value": "prince",
+    "value_int": 12,
+    "meaning_weight": -4,
+    "keywords": [
+    "Ruin",
+    "Misfortune",
+    "Incapacity",
+    "Extravagance"
+    ],
+    "description": "The airy part of air. A young intellectual man, full of ideas and designs, domineering, intensely clever but unstable. Elusive. Impressionable. Influenced: Harsh, malicious, plotting, unreliable, fanatic.",
+    "suit": "swords"
+  }
+}
