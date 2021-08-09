@@ -2,8 +2,6 @@ import './Card.css'
 import PropTypes from 'prop-types'
 import { images } from '../../utilities/images'
 
-
-
 const Card = ({ name, clicked, setClicked}) => {
 
   const handleClick = () => {
