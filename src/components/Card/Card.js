@@ -11,10 +11,15 @@ const Card = ({ name, clicked, setClicked}) => {
   }
 
   const renderCard = () => {
-    return <img className={!clicked ? "back" : "front"}
+    return <img tabIndex="0" className={!clicked ? "back" : "front"}
       src={!clicked ? images.find(image => image.includes('reverse')) : images.find(image => image.includes(name))}
       alt={name}
       onClick={handleClick}
+      onKeyPress={event => {
+        if (event.key === "Enter") {
+          handleClick()
+        }
+      }}
       />
 
   }
