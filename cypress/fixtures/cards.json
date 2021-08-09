@@ -1,0 +1,59 @@
+{
+  "cards":
+  [
+    {
+    "card_id": 1,
+    "type": "major",
+    "name_short": "ar00",
+    "name": "The Fool",
+    "value": "O",
+    "value_int": 0,
+    "meaning_weight": 0,
+    "keywords":
+      [
+      "New beginnings",
+      "Beginner's luck",
+      "Chaos",
+      "Naivety"
+      ],
+    "description": "In spiritual matters, represents ideas and thoughts, which endeavor to transcend earth. In material matters, reveals folly, eccentricity, even mania. It represents a sudden, unexpected impulse.",
+    "suit": "na"
+    },
+    {
+    "card_id": 2,
+    "type": "major",
+    "name_short": "ar01",
+    "name": "The Magus",
+    "value": "I",
+    "value_int": 1,
+    "meaning_weight": 0,
+    "keywords":
+      [
+      "Determined",
+      "Resourceful",
+      "Communication blocks",
+      "Deceit"
+      ],
+    "description": "Skill. Wisdom. Adroitness. Elasticity. Craft, Cunning. Deceit. Theft. Sometimes esoteric wisdom or power. Messages. Business Transactions. Learning or intelligence interfering with the matter in hand.",
+    "suit": "na"
+    },
+    {
+    "card_id": 19,
+    "type": "major",
+    "name_short": "ar18",
+    "name": "The Moon",
+    "value": "XVIII",
+    "value_int": 18,
+    "meaning_weight": -3,
+    "keywords":
+      [
+      "Deception",
+      "Mental confusion",
+      "Unhappiness",
+      "Mysteries unveiled"
+      ],
+    "description": "Illusion. Deception. Bewilderment. Falsehood. Voluntary change. Influenced: Hysteria. Madness.",
+    "suit": "na"
+    }
+  ]
+}
