@@ -20,12 +20,12 @@ Created with React during Mod 3 of the FE program at the Turing School of Softwa
 ## Features
 
 - UI that accesses data from [CrypTarot API](https://github.com/hoomberto/cryptarot-api) and [Nomics API](https://nomics.com/docs/) to generate Tarot readings involving the top 150 ranked cryptocurrencies
-- On visiting, the site displays the card of the day (which is updated automatically by API at ~4:10PM MST daily) and presented with options to Get a Reading, View Cryptos, and View Tarot
+- On visiting, the site displays the card of the day (which is updated automatically by [CrypTarot API](https://github.com/hoomberto/cryptarot-api) at ~4:10PM MST daily) and presented with options to Get a Reading, View Cryptos, and View Tarot
 - Tarot Reading: User is able to have a card chosen at random, flip the card, then view the results of their reading. 
 - Reading Results: Depending on the card, User will be provided with either one or two cryptocurrencies to invest in, stay away from, consider, and other options. 
 - Cryptocurrency data: Following reading, User is able to go to a page that contains further information about the cryptocurrency relevant to their reading, including price and volume changes over time, date of first trade, and a link to purchase the cryptocurrency. 
 - Currencies Section - User is able to view recent data on exchanges and search currencies by name or symbol. Each entry has a link that leads to that currency's unique link in the app.
-- Tarot Section - User can view all 78 cards present in the Book of Thoth, can click to reveal them one by one, and visit that card's unique page after revealing it. 
+- Tarot Section - User can view all 78 cards present in the Book of Thoth Tarot Deck, can click to reveal them one by one, and visit that card's unique page after revealing it. 
 
 ## In use
 
