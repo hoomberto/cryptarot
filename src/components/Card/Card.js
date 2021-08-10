@@ -5,9 +5,7 @@ import { images } from '../../utilities/images'
 const Card = ({ name, clicked, setClicked}) => {
 
   const handleClick = () => {
-    setTimeout(() => {
-      setClicked(true)
-    }, 50)
+    setClicked(true)
   }
 
   const renderCard = () => {
