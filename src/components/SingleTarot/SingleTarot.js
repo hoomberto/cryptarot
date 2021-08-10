@@ -11,8 +11,29 @@ const SingleTarot = ({ url, reverse, shuffled, name }) => {
 
   const renderCard = () => {
     return (!clicked)
-    ? <img id={`${name}Img`} className="reverse-single" alt="reversed card" src={reverse} onClick={() => setClicked(true)} />
-  : <Link id={name} to={`/tarot/${name}`}><img alt={name} className="single-tarot" src={url} onClick={() => setClicked(true)} /></Link>
+    ? <img
+      tabIndex="0"
+      id={`${name}Img`}
+      className="reverse-single"
+      alt="reversed card"
+      src={reverse}
+      onClick={() => setClicked(true)}
+      onKeyPress={event => {
+        if (event.key === "Enter") {
+          setClicked(true)
+        }
+      }}
+      />
+
+  : <Link
+      id={name}
+      to={`/tarot/${name}`}><img
+      alt={name}
+      className="single-tarot"
+      src={url}
+      />
+
+  </Link>
   }
 
   return (
