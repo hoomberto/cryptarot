@@ -8,9 +8,9 @@
 - [Features](#features)
 - [In use](#in-use)
 - [Set up](#set-up)
-- [Tools, Technologies & Credits](#tools-technologies-credits)
+- [Tools, Technologies & Credits](#tools-technologies--credits)
 - [Future Additions](#future-additions)
-- [Contributors](#wins)
+- [Contributors](#contributors)
 
 ## Overview
 
