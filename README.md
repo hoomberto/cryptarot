@@ -4,7 +4,7 @@
 ## [View the Repo for the API created for this project](https://github.com/hoomberto/cryptarot-api)
 
 ### Table of Contents
-- [Overview](#overview-and-project-goals)
+- [Overview](#overview)
 - [Features](#features)
 - [In use](#in-use)
 - [Set up](#set-up)
