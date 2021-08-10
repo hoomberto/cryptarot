@@ -3,6 +3,15 @@
 ## [View this deployed app in action](https://cryptarot.herokuapp.com/)
 ## [View the Repo for the API created for this project](https://github.com/hoomberto/cryptarot-api)
 
+### Table of Contents
+- [Overview](#overview-and-project-goals)
+- [Features](#features)
+- [In use](#in-use)
+- [Set up](#set-up)
+- [Tools, Technologies & Credits](#tools-technologies-credits)
+- [Future Additions](#future-additions)
+- [Contributors](#wins)
+
 ## Overview
 
 *Investing meets the Occult!*
@@ -45,7 +54,7 @@ Run `npm install`
 
 Run `npm start`
 
-## Tools & Technologies
+## Tools, Technologies & Credits
 <p align="left">
   <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="javascript" />
   <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="html5"/>
@@ -59,6 +68,9 @@ Run `npm start`
   <img src="https://img.shields.io/badge/-Heroku%20Deployed-orange" alt="Heroku" />
   <img src="https://img.shields.io/badge/-dayJS-yellowgreen" alt="dayJS" />
 </p>
+
+Images of Book of Thoth deck provided by [Torquil MacNeil](https://www.flickr.com/photos/laird_of_kiloran/albums/72157627891068994/)<br />
+Icons provided by FlatIcon.com
 
 ## Future Additions
 - [ ] Incorporate reverse cards to allow for reverse meanings and even more results
