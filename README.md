@@ -19,7 +19,7 @@ Created with React during Mod 3 of the FE program at the Turing School of Softwa
 
 ## Features
 
-- UI that accesses data from [CrypTarot API](https://github.com/hoomberto/cryptarot-api) and [Nomics API](https://nomics.com/docs/) to allow for Tarot readings involving various cryptocurrencies
+- UI that accesses data from [CrypTarot API](https://github.com/hoomberto/cryptarot-api) and [Nomics API](https://nomics.com/docs/) to generate Tarot readings involving the top 150 ranked cryptocurrencies
 - On visiting, the site displays the card of the day (which is updated automatically by API at ~4:10PM MST daily) and presented with options to Get a Reading, View Cryptos, and View Tarot
 - Tarot Reading: User is able to have a card chosen at random, flip the card, then view the results of their reading. 
 - Reading Results: Depending on the card, User will be provided with either one or two cryptocurrencies to invest in, stay away from, consider, and other options. 
