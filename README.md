@@ -1,6 +1,6 @@
 # CrypTarot
 
-## [View this deployed app in action](https://cryptarot.herokuapp.com/)
+## [View this deployed app in action](https://cryptarot.vercel.app/)
 ## [View the Repo for the API created for this project](https://github.com/hoomberto/cryptarot-api)
 
 ### Table of Contents
