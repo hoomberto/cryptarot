@@ -27,10 +27,10 @@ describe('Cryptos / CryptosInfo components', () => {
     cy.url().should('contain', 'cryptos/BTC')
   })
 
-  it('Single Crypto page should have information regarding currency\'s first trade date and time', () => {
-    cy.get("#BTC").click()
-    cy.get("#firstTrade").contains('August 17, 2011 6:00 PM')
-  })
+  // it('Single Crypto page should have information regarding currency\'s first trade date and time', () => {
+  //   cy.get("#BTC").click()
+  //   cy.get("#firstTrade").contains('August 17, 2011 6:00 PM')
+  // })
 
   it('User can go back to cryptos page from CryptoInfo page by clcking View All Cryptos button', () => {
     cy.get("#BTC").click()
